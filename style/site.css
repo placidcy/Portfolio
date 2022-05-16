@@ -88,6 +88,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .subMenu .site {
@@ -111,6 +112,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .subMenu .script {
@@ -127,6 +129,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .subMenu .script .desc {
@@ -149,6 +152,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .subMenu .contact .desc {
