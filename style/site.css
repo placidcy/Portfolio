@@ -1,0 +1,307 @@
+/* mainPage */
+#wrap {
+    background-color: #F5EEEC;
+}
+
+.mainPage {
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainPage .mainTitle {
+    transform: translateX(-100px);
+    opacity: 0;
+    font-size: 130px;
+    font-family: "Sulphur Point";
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 50px;
+    line-height: 1.0;
+}
+
+/* header */
+.header {
+    overflow: hidden;
+}
+
+/* nav menu */
+.header .menu {
+    float: right;
+    margin-top: 30px;
+    margin-right: 30px;
+    transform: translateY(-300px);
+    opacity: 0;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* subMenu */
+.subMenu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    left: 100px;
+    transform: translateY(-15%);
+}
+
+.subMenu div {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.subMenu div span{
+    color: black;
+    cursor: pointer;
+}
+
+.subMenu .aboutMe {
+    width: 411px;
+    height: 500px;
+    background-color: #F0A398;
+    position: relative;
+}
+
+.subMenu .aboutMe .desc {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.subMenu .aboutMe .subTitle {
+    font-size: 400px;
+    font-family: 'Raleway Dots';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subMenu .site {
+    width: 560px;
+    height: 630px;
+    background-color: #BA85CC;
+    position: relative;
+}
+
+.subMenu .site .desc {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.subMenu .site .subTitle {
+    font-size: 400px;
+    font-family: 'Porter Sans Block';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subMenu .script {
+    width: 345px;
+    height: 790px;
+    background-color: #85B2CC;
+    position: relative;
+}
+
+.subMenu .script .subTitle {
+    font-size: 400px;
+    font-family: 'Italiana';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subMenu .script .desc {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+.subMenu .contact {
+    width: 360px;
+    height: 700px;
+    background-color: #FFD395;
+    position: relative;
+}
+
+.subMenu .contact .subTitle {
+    font-size: 400px;
+    font-family: 'Phosphate';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subMenu .contact .desc {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+#wrap{
+    position: fixed;
+    display: flex;
+}
+
+.scrollValue {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-weight: 1000;
+}
+
+.horizontal {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ABOUT ME*/
+.aboutMeBox {
+    position: relative;
+    margin-left: 400px;
+    width: 115vw;
+}
+
+.submenuBox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.submenuBox .aboutMe {
+    width: 445px;
+    height: 425px;
+    background-color: #F0A398;
+}
+
+.submenuBox .aboutMe .aboutBoxTitle {
+    font-family: "Raleway Dots";
+    color: black;
+    font-size: 100px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.submenuBox .site {
+    width: 205px;
+    height: 50px;
+    background-color: #BA85CC;
+}
+
+.submenuBox .script {
+    width: 205px;
+    height: 50px;
+    background-color: #85B2CC;
+}
+
+.submenuBox .contact {
+    width: 205px;
+    height: 50px;
+    background-color: #FFD395;
+}
+
+/* intro */
+.introduce {
+    display: flex;
+    transform: translateX(40%);
+}
+
+.firstPic {
+    width: 555px;
+    height: 830px;
+    background-color: #F0A398;
+    position: relative;
+}
+
+.firstPic img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.firstIntro {
+    width: 555px;
+    height: 930px;
+    background-color: #E26747;
+}
+
+.firstIntro h2 {
+    font-size: 50px;
+    font-family: "Chosunilbo_myungjo";
+    color: white;
+    line-height: 1.5;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.firstIntro p {
+    font-size: 16px;
+    font-family: "Chosunilbo_myungjo";
+    color: white;
+    line-height: 1.5;
+    margin-top: 100px;
+    padding: 0 15px;
+}
+
+.secondPic {
+    width: 555px;
+    height: 830px;
+    background-color: #F0A398;
+    position: relative;
+}
+
+.secondPic img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondIntro {
+    width: 555px;
+    height: 755px;
+    background-color: #E26747;
+}
+
+.secondIntro .titleBox{
+    margin: 0 auto;
+}
+
+.secondIntro h2{
+    font-size: 50px;
+    font-family: "Chosunilbo_myungjo";
+    color: white;
+    line-height: 1.5;
+    margin-top: 40px;
+    padding: 0 15px;
+}
+
+.secondIntro p {
+    font-size: 16px;
+    font-family: "Chosunilbo_myungjo";
+    color: white;
+    line-height: 1.5;
+    margin-top: 100px;
+    padding: 0 15px;
+}

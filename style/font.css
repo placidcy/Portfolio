@@ -1,0 +1,37 @@
+/* font */
+
+/* font-family: 'Italiana', serif;
+   font-family: 'Raleway Dots', cursive;
+   font-family: 'Sulphur Point', sans-serif;
+   font-family: Porter Sans Block */
+/* font-family: 'Sulphur Point', sans-serif; */
+
+/* Sulphur Point */
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+
+/* porter sans block */
+@import url('http://fonts.cdnfonts.com/css/porter-sans-block');
+
+/* Italiana */
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Raleway+Dots&display=swap');
+
+/* Phosphate */
+@font-face {
+    font-family:'Phosphate';
+    src: url('PhosphatePro-Inline.otf') format('otf');
+}
+
+/* 'Sulphur Point'*/
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&family=Vesper+Libre:wght@400;500;700;900&display=swap');
+
+/* Chosunilbo_myungjo */
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
