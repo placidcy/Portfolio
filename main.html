@@ -175,10 +175,10 @@
 
         // subMenu mouse hover
         // reset
-        aboutMeBox.style.zIndex = -3;
-        siteBox.style.zIndex = -2;
+        aboutMeBox.style.zIndex = -2;
+        siteBox.style.zIndex = -3;
         scriptBox.style.zIndex = -1;
-        contactBox.style.zIndex = 0;
+        contactBox.style.zIndex = -1;
 
         // backup
         aboutMeWidth = aboutMeBox.style.width;
@@ -318,16 +318,16 @@
             
         });
 
-        // subMenu animation
-        gsap.from(aboutMeBox, {duration: 0.6, y: 800, ease:"sine.out", delay: 0.3});
-        gsap.from(siteBox, {duration: 0.6, y: 800, ease:"sine.out", delay: 0.6});
-        gsap.from(scriptBox, {duration: 0.6, y: 800, ease:"sine.out", delay: 0.9});
-        gsap.from(contactBox, {duration: 0.6, y: 800, ease:"sine.out",delay: 1.2});
+        // subMenu animations
+        gsap.from(aboutMeBox, {duration: 1.0, y: 800, ease:"sine.out", delay: 0.3});
+        gsap.from(siteBox, {duration: 1.0, y: 800, ease:"sine.out", delay: 0.6});
+        gsap.from(scriptBox, {duration: 1.0, y: 800, ease:"sine.out", delay: 0.9});
+        gsap.from(contactBox, {duration: 1.0, y: 800, ease:"sine.out",delay: 1.2});
 
-        gsap.from(aboutMeTitle, {duration: 0.6, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
-        gsap.from(siteTitle, {duration: 0.6, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
-        gsap.from(scriptTitle, {duration: 0.6, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
-        gsap.from(contactTitle, {duration: 0.6, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
+        gsap.from(aboutMeTitle, {duration: 1.0, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
+        gsap.from(siteTitle, {duration: 1.0, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
+        gsap.from(scriptTitle, {duration: 1.0, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
+        gsap.from(contactTitle, {duration: 1.0, ease:"sine.out", delay: 0.5, opacity: 1, y: 400});
         
 
         // gsap.to(aboutMeTitle, {duration: 0.6, dealy: 1.0, ease: "sine.out", opacity: 1, height: 500});

@@ -29,7 +29,7 @@
     float: right;
     margin-top: 30px;
     margin-right: 30px;
-    transform: translateY(-300px);
+    transform: translateY(-30px);
     opacity: 0;
 }
 
@@ -95,6 +95,7 @@
     height: 630px;
     background-color: #BA85CC;
     position: relative;
+    text-overflow: clip;
 }
 
 .subMenu .site .desc {
@@ -252,7 +253,7 @@
     color: white;
     line-height: 1.5;
     margin-top: 40px;
-    padding: 0 15px;
+    padding: 0 50px;
 }
 
 .firstIntro p {
@@ -261,7 +262,7 @@
     color: white;
     line-height: 1.5;
     margin-top: 100px;
-    padding: 0 15px;
+    padding: 0 50px;
 }
 
 .secondPic {
@@ -294,7 +295,7 @@
     color: white;
     line-height: 1.5;
     margin-top: 40px;
-    padding: 0 15px;
+    padding: 0 50px;
 }
 
 .secondIntro p {
@@ -303,5 +304,5 @@
     color: white;
     line-height: 1.5;
     margin-top: 100px;
-    padding: 0 15px;
+    padding: 0 50px;
 }
