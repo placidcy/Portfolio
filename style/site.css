@@ -353,6 +353,7 @@
     margin-left: 100px;
     overflow: hidden;
     position: relative;
+    width: 100vw;
 }
 
 .webStandard h2 {
@@ -361,15 +362,17 @@
 }
 
 .webStandard .webStandardText {
+    display: inline-block;
     font-family: "Chosunilbo_myungjo";
-    margin-top: 200px;
     font-size: 18px;
     line-height: 2.0;
     padding-right: 40px;
+    margin-top: 200px;
 }
 
 .webStandard .imgBox {
     float: right;
+    transform: translateY(12%);
 }
 
 .webStandard .imgBox .imgContents{
@@ -415,6 +418,7 @@
 .mainSection .mainSite{
     margin-left: 300px;
     overflow: hidden;
+    width: 100vw;
 }
 
 .mainSite h2 {
@@ -424,15 +428,22 @@
 
 .mainSite .mainSiteText {
     font-family: "Chosunilbo_myungjo";
-    margin-top: 200px;
     font-size: 18px;
     line-height: 2.0;
-    padding-right: 40px;
+    width: 310px;
     float: right;
 }
 
-.mainSite .mainSiteImgBox {
+.mainSite .mainSite_CodeView {
+    float: right;
+}
 
+.mainSite .mainSite_CodeView a {
+    color: black;
+    text-decoration: none;
+}
+
+.mainSite .mainSiteImgBox {
 }
 
 

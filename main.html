@@ -151,14 +151,15 @@
                             <img src="img/mainSiteImg.jpg" alt="mainSiteImg" width="1230" height="615">
                         </div>
                     </div>
-                    <h2>MAIN SITE</h2>
-
                     <span class="mainSiteText">수업을 시작할때부터 직접 실습하면서 작성한 코드와 내용들을 정리한 페이지입니다<br>
                         HTML / CSS에 대한 태그들이나 속성들을 정리하였고 JAVASCRIPT에 대한 내용들을 직접 실습한 코드들이 포함되어 있습니다<br>
                         메인 페이지에는 박스를 클릭하면 해당 내용의 페이지로 이동할 수 있습니다<br>
                     </span>
+                    
+                    <div class="mainSite_CodeView"><a href="#">코드 보기</a></div>
+                    
+                    <h2>MAIN SITE</h2>
 
-                    <div class="codeView"><a href="#">코드 보기</a></div>
                 </div>
 
                 <div class="php">
@@ -244,7 +245,7 @@
         const scriptDesc = document.querySelector(".script .desc");
         const contactDesc = document.querySelector(".contact .desc");
 
-        // 가로 스크롤
+        // horizental scroll
         function scroll() {
             const sectionBoxWidth = sectionBox.offsetWidth;
 
