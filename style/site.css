@@ -1,19 +1,16 @@
 /* mainPage */
 #wrap {
     background-color: #F5EEEC;
-}
-
-.mainPage {
-    width: 100vw;
-    height: 100vh;
+    position: fixed;
+    display: flex;
 }
 
 .mainPage .mainTitle {
     transform: translateX(-100px);
+    display: inline-block;
     opacity: 0;
     font-size: 130px;
     font-family: "Sulphur Point";
-    display: inline-block;
     margin-left: 100px;
     margin-top: 50px;
     line-height: 1.0;
@@ -27,7 +24,7 @@
 /* nav menu */
 .header .menu {
     float: right;
-    margin-top: 30px;
+    margin-top: 70px;
     margin-right: 30px;
     transform: translateY(-30px);
     opacity: 0;
@@ -161,11 +158,6 @@
     bottom: 20px;
 }
 
-#wrap{
-    position: fixed;
-    display: flex;
-}
-
 .scrollValue {
     position: fixed;
     bottom: 0;
@@ -289,10 +281,6 @@
     background-color: #E26747;
 }
 
-.secondIntro .titleBox{
-    margin: 0 auto;
-}
-
 .secondIntro h2{
     font-size: 50px;
     font-family: "Chosunilbo_myungjo";
@@ -310,3 +298,154 @@
     margin-top: 100px;
     padding: 0 50px;
 }
+
+/* siteWork page */
+.siteWork{
+    position: relative;
+    margin-left: 1000px;
+}
+
+.siteWork .siteWorkSubMenu {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+}
+
+.siteWork .site{
+}
+
+.siteWork .aboutMe {
+    width: 205px;
+    height: 50px;
+    background-color: #F0A398;
+    position: relative;
+}
+
+.siteWork .site {
+    width: 411px;
+    height: 500px;
+    background-color: #BA85CC;
+}
+
+.siteWork .script {
+    width: 205px;
+    height: 50px;
+    background-color: #85B2CC;
+}
+
+.siteWork .contact {
+    width: 205px;
+    height: 50px;
+    background-color: #FFD395;
+}
+
+.mainSection{
+    width: 9000px;
+    height: 875px;
+    background-color: #BA85CC;
+    transform: translateX(10%);
+    display: flex;
+}
+
+/* webstandard */
+.mainSection .webStandard {
+    margin-left: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.webStandard h2 {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
+}
+
+.webStandard .webStandardText {
+    font-family: "Chosunilbo_myungjo";
+    margin-top: 200px;
+    font-size: 18px;
+    line-height: 2.0;
+    padding-right: 40px;
+}
+
+.webStandard .imgBox {
+    float: right;
+}
+
+.webStandard .imgBox .imgContents{
+    position: relative;
+}
+
+.webStandard .view {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.webStandard .imgBox .view .imgBoxText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.mainSection .webStandard .codeView {
+    width: 205px;
+    height: 45px;
+    background-color: #9253A8;
+    text-align: center;
+    line-height: 2.5;
+    margin-bottom: 20px;
+}
+
+.mainSection .webStandard .codeView a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Chosunilbo_myungjo";
+}
+
+/* mainSite */
+.mainSection .mainSite{
+    margin-left: 300px;
+    overflow: hidden;
+}
+
+.mainSite h2 {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
+}
+
+.mainSite .mainSiteText {
+    font-family: "Chosunilbo_myungjo";
+    margin-top: 200px;
+    font-size: 18px;
+    line-height: 2.0;
+    padding-right: 40px;
+    float: right;
+}
+
+.mainSite .mainSiteImgBox {
+
+}
+
+
+.mainSection .php{
+    margin-left: 300px;
+}
+
+.mainSection .React{
+    margin-left: 300px;
+}
+
+.mainSection .Game{
+    margin-left: 300px;
+}
+
+
