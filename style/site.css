@@ -24,9 +24,9 @@
 /* nav menu */
 .header .menu {
     float: right;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-right: 30px;
-    transform: translateY(-30px);
+    transform: translateY(-50px);
     opacity: 0;
 }
 
@@ -51,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    left: 100px;
+    margin-left: 100px;
     transform: translateY(-15%);
 }
 
@@ -310,6 +310,12 @@
     left: 0;
 }
 
+.siteWork .siteWorkSubMenu .text {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
+    padding: 0 10px;
+}
+
 /* sitwork submenu */
 .siteWork .aboutMe {
     width: 205px;
@@ -346,6 +352,7 @@
 /* webstandard */
 .siteWorkSection .webStandard {
     margin-left: 100px;
+    width: 85vw;
     overflow: hidden;
     position: relative;
 }
@@ -353,23 +360,24 @@
 .webStandard h2 {
     font-family: "Porter Sans Block";
     font-size: 80px;
+    margin-top: 20px;
 }
 
 .webStandard .webStandardText {
     display: inline-block;
     font-family: "Chosunilbo_myungjo";
+    width: 320px;
     font-size: 18px;
     line-height: 2.0;
-    padding-right: 40px;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
-.webStandard .standard_imgBox {
-    float: right;
-}
-
-.webStandard .standard_imgBox .imgContents{
+.webStandard .standard_imgBox{
     position: relative;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .webStandard .standardView {
@@ -383,11 +391,16 @@
     cursor: pointer;
 }
 
-.webStandard .imgBox .view .imgBoxText{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.standard_image {
+    position: relative;
+    background-image: url("../img/캡처\ 2.jpg");
+    width: 1230px;
+    height: 615px;
+}
+
+.webStandard .standardView .imgBoxText{
+    text-align: center;
+    line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
 }
@@ -411,64 +424,145 @@
 .siteWorkSection .mainSite{
     margin-left: 300px;
     overflow: hidden;
+    width: 85vw;
+    margin-right: 0;
 }
 
 .mainSite h2 {
     font-family: "Porter Sans Block";
     font-size: 80px;
+    margin-top: 50px;
 }
 
 .mainSite .mainSiteText {
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
+    width: 320px;
     line-height: 2.0;
     float: right;
+    transform: translateY(-370px);
 }
 
-.mainSite .mainSite_CodeView {
-    float: right;
+.mainSite .mainSite_codeView {
+    width: 205px;
+    height: 45px;
+    background-color: #9253A8;
+    text-align: center;
+    line-height: 2.5;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    float: left;
 }
 
-.mainSite .mainSite_CodeView a {
-    color: black;
+.mainSite .mainSite_codeView a {
     text-decoration: none;
+    color: #ffffff;
+    font-family: "Chosunilbo_myungjo";
 }
 
-.mainSite .mainSiteImgBox {
+.mainSite .mainSite_image {
+    position: relative;
+    background-image: url("../img/캡처\ 2.jpg");
+    width: 1230px;
+    height: 615px;
 }
 
+.mainSite .mainSiteView {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.mainSite .imgBoxText{
+    text-align: center;
+    line-height: 5.5;
+    color: #ffffff;
+    font-size: 30px;
+}
 
 /* php */
 .siteWorkSection .php{
     margin-left: 300px;
     overflow: hidden;
+    width: 85vw;
+    position: relative;
 }
 
 .php h2 {
     font-family: "Porter Sans Block";
     font-size: 80px;
+    margin-top: 20px;
 }
 
 .php .phpText {
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
     line-height: 2.0;
+    margin-top: 150px;
+    width: 320px;
+    display: inline-block;
+}
+
+.php .phpImgBox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.php .php_image {
+    position: relative;
+    background-image: url("../img/php.jpg");
+    width: 1230px;
+    height: 615px;
+}
+
+.php .php_imgContents {
     float: right;
 }
 
 .php .php_codeView {
-    float: right;
+    width: 205px;
+    height: 45px;
+    background-color: #9253A8;
+    text-align: center;
+    line-height: 2.5;
+    margin-top: 85px;
+    margin-bottom: 20px;
 }
 
 .php .php_codeView a {
-    color: black;
     text-decoration: none;
+    color: #ffffff;
+    font-family: "Chosunilbo_myungjo";
+}
+
+.php .phpView {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.php .imgBoxText{
+    text-align: center;
+    line-height: 5.5;
+    color: #ffffff;
+    font-size: 30px;
 }
 
 /* react */
 .siteWorkSection .react{
     margin-left: 300px;
     overflow: hidden;
+    width: 85vw;
 }
 
 .react h2 {
@@ -476,46 +570,158 @@
     font-size: 80px;
 }
 
-.react .phpText {
+.react .react_image {
+    position: relative;
+    background-image: url("../img/react.jpg");
+    width: 1230px;
+    height: 615px;
+}
+
+.react .reactText {
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
     line-height: 2.0;
     float: right;
+    width: 340px;
+    transform: translateY(200px);
+}
+
+.react .reactView {
+    position: absolute;
+    right: 50px;
+    top: 30px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
 }
 
 .react .react_codeView {
-    float: right;
+    width: 205px;
+    height: 45px;
+    background-color: #9253A8;
+    text-align: center;
+    line-height: 2.5;
+    margin-top: 85px;
+    margin-bottom: 20px;
 }
 
 .react .react_codeView a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
+.react .imgBoxText{
+    text-align: center;
+    line-height: 5.5;
+    color: #ffffff;
+    font-size: 30px;
+}
+
 /* game */
-.siteWorkSection .react{
+.siteWorkSection .game{
     margin-left: 300px;
-    overflow: hidden;
+    width: 90vw;
+    position: relative;
 }
 
 .game h2 {
     font-family: "Porter Sans Block";
     font-size: 80px;
+    margin-top: 20px;
 }
 
 .game .gameText {
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
+    width: 340px;
     line-height: 2.0;
     float: right;
+    margin-top: 120px;
+    padding: 0 70px;
+}
+
+.game .game_imgBox {
+    position: absolute;
+    bottom: 0;
+}
+
+.game .gameView {
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    width: 185px;
+    height: 185px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .game .game_codeView {
-    float: right;
+    width: 205px;
+    height: 45px;
+    background-color: #9253A8;
+    text-align: center;
+    line-height: 2.5;
+    margin-bottom: 20px;
 }
 
 .game .game_codeView a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    font-family: "Chosunilbo_myungjo";
 }
 
+.game .game_image {
+    position: relative;
+    background-image: url("../img/game.jpg");
+    width: 1230px;
+    height: 615px;
+}
+
+.game .imgBoxText{
+    text-align: center;
+    line-height: 5.5;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+/* script section */
+.scriptSection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin-left: 200px;
+}
+
+.scriptSection .scriptSubMenu{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.scriptSection .scriptSubMenu .aboutMe{
+    width: 205px;
+    height: 50px;
+    background-color: #F0A398;
+}
+
+.scriptSection .scriptSubMenu .site{
+    width: 205px;
+    height: 50px;
+    background-color: #BA85CC;
+}
+
+.scriptSection .scriptSubMenu .script{
+    width: 411px;
+    height: 500px;
+    background-color: #85B2CC;
+}
+
+.scriptSection .scriptSubMenu .contact{
+    width: 205px;
+    height: 50px;
+    background-color: #FFD395;
+}
