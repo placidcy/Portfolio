@@ -364,11 +364,11 @@
     margin-top: 200px;
 }
 
-.webStandard .imgBox {
+.webStandard .standard_imgBox {
     float: right;
 }
 
-.webStandard .imgBox .imgContents{
+.webStandard .standard_imgBox .imgContents{
     position: relative;
 }
 
