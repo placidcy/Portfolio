@@ -165,16 +165,12 @@
     font-weight: 1000;
 }
 
-.horizontal {
-    width: 100vw;
-    height: 100vh;
-}
-
 /* ABOUT ME*/
 .aboutMeBox {
     position: relative;
-    margin-left: 400px;
-    width: 115vw;
+    margin-left: 200px;
+    width: 150vw;
+    height: 100vh;
 }
 
 .submenuBox {
@@ -220,7 +216,7 @@
 /* intro */
 .introduce {
     display: flex;
-    transform: translateX(40%);
+    margin-left: 600px;
 }
 
 .firstPic {
@@ -302,7 +298,8 @@
 /* siteWork page */
 .siteWork{
     position: relative;
-    margin-left: 1000px;
+    height: 100vh;
+    margin-left: 200px;
 }
 
 .siteWork .siteWorkSubMenu {
@@ -310,11 +307,10 @@
     align-items: flex-end;
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
-.siteWork .site{
-}
-
+/* sitwork submenu */
 .siteWork .aboutMe {
     width: 205px;
     height: 50px;
@@ -340,20 +336,18 @@
     background-color: #FFD395;
 }
 
-.mainSection{
-    width: 9000px;
+.siteWorkSection {
     height: 875px;
     background-color: #BA85CC;
-    transform: translateX(10%);
     display: flex;
+    margin-left: 770px;
 }
 
 /* webstandard */
-.mainSection .webStandard {
+.siteWorkSection .webStandard {
     margin-left: 100px;
     overflow: hidden;
     position: relative;
-    width: 100vw;
 }
 
 .webStandard h2 {
@@ -372,14 +366,13 @@
 
 .webStandard .imgBox {
     float: right;
-    transform: translateY(12%);
 }
 
 .webStandard .imgBox .imgContents{
     position: relative;
 }
 
-.webStandard .view {
+.webStandard .standardView {
     position: absolute;
     right: 50px;
     bottom: 30px;
@@ -399,7 +392,7 @@
     font-size: 30px;
 }
 
-.mainSection .webStandard .codeView {
+.webStandard .standard_codeView {
     width: 205px;
     height: 45px;
     background-color: #9253A8;
@@ -408,17 +401,16 @@
     margin-bottom: 20px;
 }
 
-.mainSection .webStandard .codeView a {
+.webStandard .standard_codeView a {
     text-decoration: none;
     color: #ffffff;
     font-family: "Chosunilbo_myungjo";
 }
 
 /* mainSite */
-.mainSection .mainSite{
+.siteWorkSection .mainSite{
     margin-left: 300px;
     overflow: hidden;
-    width: 100vw;
 }
 
 .mainSite h2 {
@@ -430,7 +422,6 @@
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
     line-height: 2.0;
-    width: 310px;
     float: right;
 }
 
@@ -447,16 +438,84 @@
 }
 
 
-.mainSection .php{
+/* php */
+.siteWorkSection .php{
     margin-left: 300px;
+    overflow: hidden;
 }
 
-.mainSection .React{
-    margin-left: 300px;
+.php h2 {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
 }
 
-.mainSection .Game{
-    margin-left: 300px;
+.php .phpText {
+    font-family: "Chosunilbo_myungjo";
+    font-size: 18px;
+    line-height: 2.0;
+    float: right;
 }
 
+.php .php_codeView {
+    float: right;
+}
+
+.php .php_codeView a {
+    color: black;
+    text-decoration: none;
+}
+
+/* react */
+.siteWorkSection .react{
+    margin-left: 300px;
+    overflow: hidden;
+}
+
+.react h2 {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
+}
+
+.react .phpText {
+    font-family: "Chosunilbo_myungjo";
+    font-size: 18px;
+    line-height: 2.0;
+    float: right;
+}
+
+.react .react_codeView {
+    float: right;
+}
+
+.react .react_codeView a {
+    color: black;
+    text-decoration: none;
+}
+
+/* game */
+.siteWorkSection .react{
+    margin-left: 300px;
+    overflow: hidden;
+}
+
+.game h2 {
+    font-family: "Porter Sans Block";
+    font-size: 80px;
+}
+
+.game .gameText {
+    font-family: "Chosunilbo_myungjo";
+    font-size: 18px;
+    line-height: 2.0;
+    float: right;
+}
+
+.game .game_codeView {
+    float: right;
+}
+
+.game .game_codeView a {
+    color: black;
+    text-decoration: none;
+}
 

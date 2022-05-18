@@ -14,7 +14,7 @@
 
 <body>
     <div id="wrap">
-        <section class="mainPage horizontal">
+        <section class="mainPage">
             <header class="header">
                 <h2 class="mainTitle">THE<br>
                     PORTFOLIO</h2>
@@ -53,7 +53,7 @@
             </div>
         </section>
 
-        <section class="aboutMeBox horizontal">
+        <section class="aboutMeBox">
             <acticle class="submenuBox">
                 <div class="aboutMe">
                     <span class="aboutBoxTitle">ABOUT</span>
@@ -114,7 +114,7 @@
             </div>
 
         </section>
-        <section class="siteWork horizontal">
+        <section class="siteWork">
             <acticle class="siteWorkSubMenu">
                 <div class="aboutMe"></div>
 
@@ -128,7 +128,7 @@
                 <div class="contact"></div>
             </acticle>
 
-            <div class="mainSection">
+            <div class="siteWorkSection">
                 <div class="webStandard">
                     <h2>WEBSTANDARD</h2>
                     <span class="webStandardText">웹 표준을 기준으로 구현한 웹사이트입니다<br>
@@ -136,17 +136,17 @@
                     </span>
 
                     <div class="imgBox">
-                        <div class="codeView"><a href="#">코드 보기</a></div>
+                        <div class="standard_codeView"><a href="#">코드 보기</a></div>
                         <div class="imgContents">
                             <img src="img/websiteImage1.jpg" alt="websiteImage1" width="1230" height="615">
-                            <div class="view"><span class="imgBoxText">VIEW</span></div>
+                            <div class="standardView"><span class="imgBoxText">VIEW</span></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="mainSite">
                     <div class="mainSiteImgBox">
-                        <div class="view">VIEW</div>
+                        <div class="mainSiteView">VIEW</div>
                         <div class="imgContents">
                             <img src="img/mainSiteImg.jpg" alt="mainSiteImg" width="1230" height="615">
                         </div>
@@ -156,7 +156,7 @@
                         메인 페이지에는 박스를 클릭하면 해당 내용의 페이지로 이동할 수 있습니다<br>
                     </span>
                     
-                    <div class="mainSite_CodeView"><a href="#">코드 보기</a></div>
+                    <div class="mainSite_codeView"><a href="#">코드 보기</a></div>
                     
                     <h2>MAIN SITE</h2>
 
@@ -171,17 +171,17 @@
                     </span>
 
                     <div class="phpImgBox">
-                        <div class="codeView"><a href="#">코드 보기</a></div>
+                        <div class="php_codeView"><a href="#">코드 보기</a></div>
                         <div class="imgContents">
                             <img src="img/websiteImage1.jpg" alt="websiteImage1" width="1230" height="615">
-                            <div class="view">VIEW</div>
+                            <div class="phpView">VIEW</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="React">
+                <div class="react">
                     <h2>REACT</h2>
-                    <span class="text">REACT를 활용한 웹사이트입니다<br>
+                    <span class="reactText">REACT를 활용한 웹사이트입니다<br>
                         각각 영역을 구성하는 태그들을 컴포넌트로 만들어 나누었습니다<br>
                         JSON 파일을 이용해 데이터를 불러오도록 처리하였고<br>
                         유튜브 API와 themoviedb API 기능을 사용해서 검색어에 해당하는 동영상과 영화 목록들을 불러올 수 있고 이미지를 클릭하면 해당 동영상이나 영화 페이지로 이동할
@@ -189,27 +189,27 @@
                     </span>
 
                     <div class="imgBox">
-                        <div class="codeView"><a href="#">코드 보기</a></div>
+                        <div class="react_codeView"><a href="#">코드 보기</a></div>
                         <div class="imgContents">
                             <img src="img/websiteImage1.jpg" alt="websiteImage1" width="1230" height="615">
-                            <div class="view">VIEW</div>
+                            <div class="reactView">VIEW</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="Game">
+                <div class="game">
                     <h2>GAME</h2>
-                    <span class="text">JAVASCRIPT 언어를 활용해 음악 플레이어와 같은 그림 찾기,
+                    <span class="gameText">JAVASCRIPT 언어를 활용해 음악 플레이어와 같은 그림 찾기,
                         타자연습, 테트리스 게임을 구현하였습니다<br>
                         왼쪽 이미지를 클릭하면 해당하는 게임이나 음악 플레이어가
                         팝업 창으로 나타납니다
                     </span>
 
                     <div class="imgBox">
-                        <div class="codeView"><a href="#">코드 보기</a></div>
+                        <div class="game_codeView"><a href="#">코드 보기</a></div>
                         <div class="imgContents">
                             <img src="img/websiteImage1.jpg" alt="websiteImage1" width="1230" height="615">
-                            <div class="view">VIEW</div>
+                            <div class="gameView">VIEW</div>
                         </div>
                     </div>
                 </div>
@@ -219,13 +219,12 @@
         <section class="script horizontal">section4</section>
         <section class="contact horizontal">section5</section>
 
-        <div class="scrollValue">scrollTop : <span></span></div>
+        <div class="scrollValue">scroll : <span></span></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script>
         const sectionBox = document.getElementById("wrap");
-        const section = document.querySelector(".horizontal");
         const mainTitle = document.querySelector(".mainPage .mainTitle");
 
         const aboutMeBox = document.querySelector(".subMenu .aboutMe");
