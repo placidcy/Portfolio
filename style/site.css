@@ -791,7 +791,7 @@
 
 /* mouseEffect */
 .mouseEffect {
-    margin: -10vh 7vw 20vh 15vw;
+    margin: -7vh 7vw 20vh 15vw;
     overflow: hidden;
     position: relative;
     width: 1230px;
@@ -822,7 +822,7 @@
 
 /* sliderEffect */
 .sliderEffect {
-    margin: -10vh 7vw 20vh 0;
+    margin: -7vh 7vw 20vh 0;
     position: relative;
     width: 1230px;
 }
@@ -852,7 +852,7 @@
 
 /* parrallax */
 .parallaxEffect {
-    margin: -10vh 7vw 20vh 0;
+    margin: -7vh 7vw 20vh 0;
     position: relative;
     width: 1230px;
 }
