@@ -690,7 +690,7 @@
 /* script section */
 .scriptSection {
     position: relative;
-    width: 100vw;
+    width: 8000px;
     height: 100vh;
     margin-left: 200px;
 }
@@ -702,6 +702,7 @@
     bottom: 0;
     left: 0;
 }
+
 .scriptSection .scriptSubMenu .aboutMe{
     width: 205px;
     height: 50px;
@@ -720,8 +721,163 @@
     background-color: #85B2CC;
 }
 
+.scriptSection .script .scriptText {
+    font-size: 100px;
+    display: inline-block;
+    font-family: 'Italiana';
+    margin: 50px 50px;
+}
+
 .scriptSection .scriptSubMenu .contact{
     width: 205px;
     height: 50px;
     background-color: #FFD395;
 }
+
+.scriptSection .scriptTitle {
+    font-size: 300px;
+    font-family: "Italiana";
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 1250px;
+}
+
+.scriptSection .scriptMain {
+    position: absolute;
+    left: 2200px;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.scriptSection .scriptContents{
+    background-color: #ffddd4;
+    width: 230vw;
+    height: 85vh;
+}
+
+.scriptSection .topSection {
+    width: 200vw;
+    height: 15vh;
+    background-color: black;
+    margin-left: 30vw;
+}
+
+.topSection .topText {
+    font-family: 'Bebas Neue';
+    display: inline-block;
+    font-size: 40px;
+    line-height: 0.9;
+    text-align: start;
+    color: #fff;
+    margin-left: 350px;
+    margin-top: 40px;
+}
+
+.scriptContents .subText {
+    font-family: 'Bebas Neue';
+    font-size: 19px;
+    font-weight: 200;
+    display: inline-block;
+    margin-top: 100px;
+    margin-left: 40px;
+    transform: rotate(90deg);
+    font-weight: 400;
+}
+
+.effectBox {
+    display: flex;
+}
+
+/* mouseEffect */
+.mouseEffect {
+    margin: -10vh 7vw 20vh 15vw;
+    overflow: hidden;
+    position: relative;
+    width: 1230px;
+}
+
+.mouseEffect iframe {
+}
+
+.mouseEffect .mouse_subtitle {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Dosis';
+    font-size: 16px;
+}
+
+.mouseEffect .mouse_title {
+    font-size: 40px;
+    font-family: 'Bebas Neue';
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.mouseEffect .mouse_desc {
+    font-family: 'Chosunilbo_myungjo';
+    line-height: 1.5;
+    float: right;
+}
+
+/* sliderEffect */
+.sliderEffect {
+    margin: -10vh 7vw 20vh 0;
+    position: relative;
+    width: 1230px;
+}
+
+.sliderEffect iframe {
+}
+
+.sliderEffect .slider_subtitle {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Dosis';
+    font-size: 16px;
+}
+
+.sliderEffect .slider_title {
+    font-size: 40px;
+    font-family: 'Bebas Neue';
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.sliderEffect .slider_desc {
+    font-family: 'Chosunilbo_myungjo';
+    line-height: 1.5;
+    float: right;
+}
+
+/* parrallax */
+.parallaxEffect {
+    margin: -10vh 7vw 20vh 0;
+    position: relative;
+    width: 1230px;
+}
+
+.parallaxEffect iframe {
+}
+
+.parallaxEffect .parallax_subtitle {
+    display: block;
+    margin-top: 10px;
+    font-family: 'Dosis';
+    font-size: 16px;
+}
+
+.parallaxEffect .parallax_title {
+    font-size: 40px;
+    font-family: 'Bebas Neue';
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.parallaxEffect .parallax_desc {
+    font-family: 'Chosunilbo_myungjo';
+    line-height: 1.5;
+    float: right;
+}
+
+

@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/site.css">
     <link rel="stylesheet" href="./style/font.css">
+
+    <style>
+        /* 'Bebas Neue' */
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
 </head>
 
 <body>
@@ -59,20 +64,11 @@
                     <span class="aboutBoxTitle">ABOUT</span>
                 </div>
 
-                <div class="site">
-                    <!-- <span class="text">S</span>
-                    <span class="desc">SITE</span> -->
-                </div>
+                <div class="site"></div>
 
-                <div class="script">
-                    <!-- <span class="text">S</span>
-                    <span class="desc">SCRIPT</span> -->
-                </div>
+                <div class="script"></div>
 
-                <div class="contact">
-                    <!-- <span class="text">C</span>
-                    <span class="desc">CONTACT</span> -->
-                </div>
+                <div class="contact"></div>
             </acticle>
 
             <div class="introduce">
@@ -129,7 +125,7 @@
             </acticle>
 
             <div class="siteWorkSection">
-                <div class="webStandard .clearfix">
+                <div class="webStandard">
                     <h2>WEBSTANDARD</h2>
                     <span class="webStandardText">웹 표준을 기준으로 구현한 웹사이트입니다<br>
                         이미지 안에는 웹 접근성을 위한 대체 텍스트를 추가하였고 <br>slick, jquery 기능을 이용해 이미지 슬라이드 효과를 구현하였습니다
@@ -147,7 +143,7 @@
                     </div>
                 </div>
 
-                <div class="mainSite clearfix">
+                <div class="mainSite">
                     <div class="mainSiteImgBox">
                         <div class="mainSite_imgContents">
                             <div class="mainSite_image">
@@ -167,7 +163,7 @@
                     <h2>MAIN SITE</h2>
                 </div>
 
-                <div class="php clearfix">
+                <div class="php ">
                     <h2>PHP</h2>
                     <span class="phpText">PHP 기능을 활용한 웹사이트입니다<br>
                         메인 페이지의 이미지는 슬라이드 효과를 추가하였고 회원가입과 로그인을 할수 있습니다<br>
@@ -188,7 +184,7 @@
                     </div>
                 </div>
 
-                <div class="react clearfix">
+                <div class="react">
                     <span class="reactText">REACT를 활용한 웹사이트입니다<br>
                         각각 영역을 구성하는 태그들을 컴포넌트로 만들어 나누었습니다<br>
                         JSON 파일을 이용해 데이터를 불러오도록 처리하였고<br>
@@ -210,7 +206,7 @@
                     <h2>REACT</h2>
                 </div>
 
-                <div class="game clearfix">
+                <div class="game">
                     <h2>GAME</h2>
 
                     <span class="gameText">JAVASCRIPT 언어를 활용해 음악 플레이어와 같은 그림 찾기,
@@ -246,6 +242,55 @@
 
                 <div class="contact"></div>
             </acticle>
+
+            <h2 class="scriptTitle">SCRIPT<br>SITE</h2>
+
+            <div class="scriptMain">
+                <div class="topSection">
+                    <p class="topText">PRESS<br>ARTICLES</p>
+                </div>
+
+                <div class="scriptContents">
+                    <div class="subText">SCRIPT</div>
+
+                    <div class="effectBox">
+                        <div class="mouseEffect">
+                            <iframe src="https://placidcy.github.io/webs_class/javascript/effect/mouseEffect01.html"
+                                width="1230" height="615"></iframe>
+                            <span class="mouse_subtitle">SCRIPT 1</span>
+                            <h3 class="mouse_title">MOUSE EFFECT</h3>
+                            <span class="mouse_desc">마우스 움직임에 대한 시각적인효과를 구현했습니다<br>
+                                커서가 특정 텍스트로 이동할때 커서 모양 변화,<br>
+                                커서 주변의 이미지 색상 명암 변화, 텍스트 움직임 등을<br>
+                                구현했습니다
+                            </span>
+                        </div>
+
+                        <div class="sliderEffect">
+                            <iframe src="https://placidcy.github.io/webs_class/javascript/effect/sliderEffect01.html"
+                                width="1230" height="615"></iframe>
+                            <span class="slider_subtitle">SCRIPT 2</span>
+                            <h3 class="slider_title">SLIDER EFFECT</h3>
+                            <span class="slider_desc">웹페이지에서 화면을 스크롤 했을때 이미지와<br>
+                                텍스트에 대한 트렌지션 효과, 리빌 효과,<br>
+                                가로 스크롤, 세로 스크롤 등을 구현했습니다
+                            </span>
+                        </div>
+
+                        <div class="parallaxEffect">
+                            <iframe src="https://placidcy.github.io/webs_class/javascript/effect/parallaxEffect01.html"
+                            width="1230" height="615"></iframe>
+                        <span class="parallax_subtitle">SCRIPT 3</span>
+                        <h3 class="parallax_title">PARRALAX EFFECT</h3>
+                        <span class="parallax_desc">여러 개의 이미지들을 가로 방향 또는 세로 방향으로<br>
+                            이동시키며 순서대로 보여주는 효과,<br>
+                            자동으로 다음 이미지를 보여주는 효과 등을 구현했
+                            습니다
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <div class="scrollValue">scroll : <span></span></div>

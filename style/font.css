@@ -6,6 +6,8 @@
    font-family: 'Porter Sans Block' */
 /* font-family: 'Sulphur Point'; */
 /* font-family: 'Chosunilbo_myungjo'*/
+/* font-family: 'Bebas Neue', cursive; */
+/* font-family: 'Anton', sans-serif; */
 
 /* Sulphur Point */
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
@@ -36,3 +38,12 @@
     font-style: normal;
 }
 
+/* 'Bebas Neue' */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* @import url(//db.onlinewebfonts.com/c/ba65c7020043d1d406686743e82e2e5d?family=Bebas+Neue); */
+
+/* Dosis */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+/* anton */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
