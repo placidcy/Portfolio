@@ -1,4 +1,8 @@
 /* mainPage */
+html {
+    scroll-behavior: smooth;
+}
+
 #wrap {
     background-color: #F5EEEC;
     position: fixed;
@@ -144,12 +148,13 @@
 
 .subMenu .contact .subTitle {
     font-size: 400px;
-    font-family: 'Phosphate';
+    font-family: 'PhosphateInline';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
+    z-index: -2;
 }
 
 .subMenu .contact .desc {
@@ -693,14 +698,12 @@
     width: 7000px;
     height: 100vh;
     margin-left: 200px;
+    display: flex;
 }
 
 .scriptSection .scriptSubMenu{
     display: flex;
     align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 
 .scriptSection .scriptSubMenu .aboutMe{
@@ -881,16 +884,23 @@
 
 /* contact */
 .contactSection {
-    position: relative;
-    width: 100vw;
+    width: 380vw;
     height: 100vh;
+    display: flex;
 }
+
+.contact_Contents {
+    display: flex;
+    margin-left: 200px;
+}
+
+.contact_Contents .location {
+    text-align: left;
+}
+
 .contactSection .contactSubMenu{
     display: flex;
     align-items: flex-end;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 
 .contactSection .contactSubMenu .aboutMe{
@@ -918,10 +928,216 @@
 }
 
 .contactSection .contact .contactText {
-    font-size: 80px;
+    font-size: 95px;
     display: inline-block;
-    font-family: 'Phosphate';
-    margin: 20px 25px 50px 25px;
+    font-family: 'PhosphateInline';
+    margin-top: 100px;
+    margin-left: 15px;
 }
+
+/* location */
+.location {
+    background-color: #FFD395;
+    width: 110vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.location .sideText{
+    font-size: 20px;
+    font-family: "Bebas Neue";
+    position: absolute;
+    left: 70px;
+    top: 370px;
+    transform: rotate(90deg);
+}
+
+.location h2{
+    font-size: 300px;
+    font-family: "Bebas Neue";
+    margin-top: 280px;
+    margin-left: 170px;
+}
+
+.location .contact_intro {
+    font-size: 20px;
+    font-family: 'PT Sans Narrow';
+    margin-left: 170px;
+}
+
+.location .contact_location {
+    font-size: 20px;
+    font-family: 'PT Sans Narrow';
+    margin-top: 20px;
+    margin-left: 170px;
+}
+
+.location .mapImage {
+    width: 700px;
+    height: 700px;
+    background: url(../img/naver_map\ 1.jpg);
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+.contact_sideImage {
+    width: 600px;
+    height: 100vh;
+    background: url(../img/Rectangle\ 10847.jpg);
+}
+
+/* email */
+.emailSection {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.emailSection .email_title{
+    font-size: 300px;
+    font-family: "Bebas Neue";
+    margin-top: 230px;
+    margin-left: 170px;
+}
+
+.emailSection p {
+    font-size: 20px;
+    font-family: 'PT Sans Narrow';
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.emailSection .email_sideTitle {
+    font-family: "Bebas Neue";
+    font-size: 20px;
+}
+
+.emailSection .emailLink a{
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.emailSection .email_descBox {
+    float: right;
+    margin-right: 100px;
+}
+
+.emailSection .line {
+    height: 1.5px;
+    width: 700px;
+    background-color: black;
+    margin: 25px 0;
+}
+
+/* oterInfo */
+.otherInfo {
+    width: 80vw;
+    height: 100vh;
+
+    background-color: black;
+    position: relative;
+}
+
+.otherInfo_sideText1{
+    color: white;
+    font-size: 20px;
+    font-family: "Bebas Neue";
+    transform: rotate(90deg);
+    position: absolute;
+    left: 80px;
+    top: 180px;
+}
+
+.otherInfo_sideText2{
+    color: white;
+    font-size: 20px;
+    font-family: "Bebas Neue";
+    position: absolute;
+    left: 125px;
+    top: 100px;
+}
+
+.otherInfo .title {
+    color: white;
+    font-size: 170px;
+    font-family: "Bebas Neue";
+    margin-left: 200px;
+    margin-top: 150px;
+    line-height: 1.0;
+}
+
+.otherInfo_imageBox {
+    display: flex;
+    padding-left: 185px;
+}
+
+.otherInfo .imgs {
+    margin: 0 15px;
+}
+
+.otherInfo_imageBox .img1 {
+    width: 250px;
+    height: 200px;
+    background: url(../img/otherInfo_image1.jpg);
+}
+
+.otherInfo_imageBox .img2 {
+    width: 250px;
+    height: 200px;
+    background: url(../img/otherInfo_image2.jpg);
+}
+.otherInfo_imageBox .img3 {
+    width: 250px;
+    height: 200px;
+    background: url(../img/otherInfo_image3.jpg);
+}
+
+.otherInfo_imageBox .img4 {
+    width: 250px;
+    height: 200px;
+    background: url(../img/otherInfo_image4.jpg);
+}
+
+.otherSites {
+    margin-left: 200px;
+    margin-top: 15px;
+}
+
+.otherSites a img {
+    vertical-align: middle;
+}
+
+.otherSites .otherSites_title{
+    font-size: 20px;
+    font-family: "Bebas Neue";
+    color: white;
+}
+
+.otherSites .line {
+    height: 1px;
+    width: 700px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+.otherSites .linkText{
+    color: white;
+    font-size: 18px;
+    font-family: "Bebas Neue";
+}
+
+
+
+
+
+
+
+
+
 
 

@@ -8,6 +8,7 @@
 /* font-family: 'Chosunilbo_myungjo'*/
 /* font-family: 'Bebas Neue', cursive; */
 /* font-family: 'Anton', sans-serif; */
+/* font-family: 'PT Sans Narrow' */
 
 /* Sulphur Point */
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap');
@@ -23,8 +24,8 @@
 
 /* Phosphate */
 @font-face {
-    font-family:'Phosphate';
-    src: url('PhosphatePro-Inline.otf') format('otf');
+    font-family:'PhosphateInline';
+    src: url('./fontFiles/PhosphateInline.ttf') format('truetype');
 }
 
 /* 'Sulphur Point'*/
@@ -47,3 +48,6 @@
 
 /* anton */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* PT Sans Narrow */
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
