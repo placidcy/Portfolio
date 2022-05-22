@@ -9,9 +9,12 @@ html {
     display: flex;
 }
 
+.mainPage {
+    width: 100vw;
+}
+
 .mainPage .mainTitle {
     transform: translateX(-100px);
-    display: inline-block;
     opacity: 0;
     font-size: 130px;
     font-family: "Sulphur Point";
@@ -21,8 +24,8 @@ html {
 }
 
 .mainPage_desc {
-    display: inline-block;
-
+    margin-left: 100px;
+    margin-top: 15px;
 }
 
 /* header */
@@ -34,8 +37,8 @@ html {
 .header .menu {
     position: absolute;
     transform: translateY(-150px);
-    right: 0px;
-    top: 50px;
+    right: 40px;
+    top: 25px;
     opacity: 0;
 }
 
@@ -57,9 +60,11 @@ html {
 
 /* subMenu */
 .subMenu {
+    position: absolute;
+    bottom: 0;
     display: flex;
     align-items: flex-end;
-    margin-left: 100px;
+    margin-left: 130px;
 }
 
 .subMenu div {
