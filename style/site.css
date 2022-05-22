@@ -20,17 +20,22 @@ html {
     line-height: 1.0;
 }
 
+.mainPage_desc {
+    display: inline-block;
+
+}
+
 /* header */
 .header {
-    overflow: hidden;
+    position: relative;
 }
 
 /* nav menu */
 .header .menu {
-    float: right;
-    margin-top: 50px;
-    margin-right: 30px;
-    transform: translateY(-50px);
+    position: absolute;
+    transform: translateY(-150px);
+    right: 0px;
+    top: 50px;
     opacity: 0;
 }
 
@@ -53,25 +58,21 @@ html {
 /* subMenu */
 .subMenu {
     display: flex;
-    justify-content: center;
     align-items: flex-end;
     margin-left: 100px;
-    transform: translateY(-15%);
 }
 
 .subMenu div {
     margin-left: 0;
     margin-right: 0;
-}
-
-.subMenu div span{
     color: black;
     cursor: pointer;
 }
 
 .subMenu .aboutMe {
     width: 411px;
-    height: 500px;
+    /* height: 450px; */
+    height: 0;
     background-color: #F0A398;
     position: relative;
 }
@@ -94,7 +95,8 @@ html {
 
 .subMenu .site {
     width: 560px;
-    height: 630px;
+    /* height: 600px; */
+    height: 0;
     background-color: #BA85CC;
     position: relative;
     text-overflow: clip;
@@ -118,7 +120,8 @@ html {
 
 .subMenu .script {
     width: 345px;
-    height: 790px;
+    /* height: 750px; */
+    height: 0;
     background-color: #85B2CC;
     position: relative;
 }
@@ -141,7 +144,8 @@ html {
 
 .subMenu .contact {
     width: 360px;
-    height: 700px;
+    /* height: 660px; */
+    height: 0;
     background-color: #FFD395;
     position: relative;
 }
@@ -225,8 +229,8 @@ html {
 }
 
 .firstPic {
-    width: 555px;
-    height: 830px;
+    width: 535px;
+    height: 0;
     background-color: #F0A398;
     position: relative;
 }
@@ -236,11 +240,13 @@ html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .firstIntro {
-    width: 555px;
-    height: 930px;
+    width: 535px;
+    /* height: 900px; */
+    height: 0;
     background-color: #E26747;
 }
 
@@ -251,6 +257,8 @@ html {
     line-height: 1.5;
     margin-top: 40px;
     padding: 0 50px;
+    opacity: 0;
+    transform: translateX(-130px);
 }
 
 .firstIntro p {
@@ -260,25 +268,36 @@ html {
     line-height: 1.5;
     margin-top: 100px;
     padding: 0 50px;
+    transform: translateY(-130px);
+    opacity: 0;
 }
 
 .secondPic {
-    width: 555px;
-    height: 830px;
+    width: 535px;
+    /* height: 810px; */
+    height: 0;
     background-color: #F0A398;
     position: relative;
 }
 
 .secondPic img{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: 70px;
+    margin-top: 20px;
 }
 
+.secondPic .textBox {
+    font-size: 18px;
+    font-family: "Chosunilbo_myungjo";
+    color: white;
+    line-height: 1.5;
+    padding: 50px 50px 0 50px;
+    opacity: 0;
+    transform: translateY(-60px);
+}
 .secondIntro {
-    width: 555px;
-    height: 755px;
+    width: 535px;
+    /* height: 735px; */
+    height: 0;
     background-color: #E26747;
 }
 
@@ -289,6 +308,8 @@ html {
     line-height: 1.5;
     margin-top: 40px;
     padding: 0 50px;
+    opacity: 0;
+    transform: translateX(-80px);
 }
 
 .secondIntro p {
@@ -298,6 +319,8 @@ html {
     line-height: 1.5;
     margin-top: 100px;
     padding: 0 50px;
+    opacity: 0;
+    transform: translateY(-100px);
 }
 
 /* siteWork page */
@@ -319,6 +342,8 @@ html {
     font-family: "Porter Sans Block";
     font-size: 80px;
     padding: 0 10px;
+    opacity: 0;
+    transform: translateY(150px);
 }
 
 /* sitwork submenu */
@@ -331,7 +356,8 @@ html {
 
 .siteWork .site {
     width: 411px;
-    height: 500px;
+    /* height: 500px; */
+    height: 50px;
     background-color: #BA85CC;
 }
 
@@ -347,14 +373,16 @@ html {
     background-color: #FFD395;
 }
 
+
+/* webstandard */
 .siteWorkSection {
-    height: 875px;
+    /* height: 875px; */
+    height: 0;
     background-color: #BA85CC;
     display: flex;
     margin-left: 770px;
 }
 
-/* webstandard */
 .siteWorkSection .webStandard {
     margin-left: 100px;
     width: 85vw;
@@ -366,6 +394,8 @@ html {
     font-family: "Porter Sans Block";
     font-size: 80px;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-130px);
 }
 
 .webStandard .webStandardText {
@@ -375,6 +405,8 @@ html {
     font-size: 18px;
     line-height: 2.0;
     margin-top: 150px;
+    opacity: 0;
+    transform: translateX(-130px);
 }
 
 .webStandard .standard_imgBox{
@@ -394,13 +426,15 @@ html {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    opacity: 0;
 }
 
-.standard_image {
+.webStandard .standard_image {
     position: relative;
     background-image: url("../img/캡처\ 2.jpg");
     width: 1230px;
-    height: 615px;
+    /* height: 615px; */
+    height: 0;
 }
 
 .webStandard .standardView .imgBoxText{
@@ -408,10 +442,12 @@ html {
     line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
+    opacity: 0;
 }
 
 .webStandard .standard_codeView {
-    width: 205px;
+    /* width: 205px; */
+    width: 0;
     height: 45px;
     background-color: #9253A8;
     text-align: center;
@@ -423,6 +459,8 @@ html {
     text-decoration: none;
     color: #ffffff;
     font-family: "Chosunilbo_myungjo";
+    transform: translateX(-130px);
+    opacity: 0;
 }
 
 /* mainSite */
@@ -437,6 +475,8 @@ html {
     font-family: "Porter Sans Block";
     font-size: 80px;
     margin-top: 50px;
+    opacity: 0;
+    transform: translateX(-130px);
 }
 
 .mainSite .mainSiteText {
@@ -445,11 +485,13 @@ html {
     width: 320px;
     line-height: 2.0;
     float: right;
-    transform: translateY(-370px);
+    transform: translateY(-370px) translateX(130px); 
+    opacity: 0;
 }
 
 .mainSite .mainSite_codeView {
-    width: 205px;
+    /* width: 205px; */
+    width: 0;
     height: 45px;
     background-color: #9253A8;
     text-align: center;
@@ -463,13 +505,16 @@ html {
     text-decoration: none;
     color: #ffffff;
     font-family: "Chosunilbo_myungjo";
+    opacity: 0;
+    transform: translateX(130px);
 }
 
 .mainSite .mainSite_image {
     position: relative;
     background-image: url("../img/캡처\ 2.jpg");
     width: 1230px;
-    height: 615px;
+    /* height: 615px; */
+    height: 0;
 }
 
 .mainSite .mainSiteView {
@@ -481,6 +526,7 @@ html {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    opacity: 0;
 }
 
 .mainSite .imgBoxText{
@@ -488,6 +534,7 @@ html {
     line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
+    opacity: 0;
 }
 
 /* php */
@@ -502,6 +549,8 @@ html {
     font-family: "Porter Sans Block";
     font-size: 80px;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-100px);
 }
 
 .php .phpText {
@@ -511,6 +560,8 @@ html {
     margin-top: 150px;
     width: 320px;
     display: inline-block;
+    opacity: 0;
+    transform: translateX(-100px);
 }
 
 .php .phpImgBox {
@@ -518,11 +569,13 @@ html {
     right: 0;
     bottom: 0;
 }
+
 .php .php_image {
     position: relative;
     background-image: url("../img/php.jpg");
     width: 1230px;
-    height: 615px;
+    /* height: 615px; */
+    height: 0;
 }
 
 .php .php_imgContents {
@@ -530,7 +583,8 @@ html {
 }
 
 .php .php_codeView {
-    width: 205px;
+    /* width: 205px; */
+    width: 0;
     height: 45px;
     background-color: #9253A8;
     text-align: center;
@@ -543,6 +597,7 @@ html {
     text-decoration: none;
     color: #ffffff;
     font-family: "Chosunilbo_myungjo";
+    opacity: 0;
 }
 
 .php .phpView {
@@ -554,6 +609,7 @@ html {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    opacity: 0;
 }
 
 .php .imgBoxText{
@@ -561,6 +617,7 @@ html {
     line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
+    opacity: 0;
 }
 
 /* react */
@@ -573,13 +630,16 @@ html {
 .react h2 {
     font-family: "Porter Sans Block";
     font-size: 80px;
+    opacity: 0;
+    transform: translateX(-100px);
 }
 
 .react .react_image {
     position: relative;
     background-image: url("../img/react.jpg");
     width: 1230px;
-    height: 615px;
+    /* height: 615px; */
+    height: 0;
 }
 
 .react .reactText {
@@ -588,7 +648,8 @@ html {
     line-height: 2.0;
     float: right;
     width: 340px;
-    transform: translateY(200px);
+    transform: translateY(200px) translateX(100px);
+    opacity: 0;
 }
 
 .react .reactView {
@@ -600,10 +661,12 @@ html {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.4);
     cursor: pointer;
+    opacity: 0;
 }
 
 .react .react_codeView {
-    width: 205px;
+    /* width: 205px; */
+    width: 0;
     height: 45px;
     background-color: #9253A8;
     text-align: center;
@@ -615,6 +678,7 @@ html {
 .react .react_codeView a {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    opacity: 0;
 }
 
 .react .imgBoxText{
@@ -622,6 +686,7 @@ html {
     line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
+    opacity: 0;
 }
 
 /* game */
@@ -635,6 +700,8 @@ html {
     font-family: "Porter Sans Block";
     font-size: 80px;
     margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-100px);
 }
 
 .game .gameText {
@@ -645,6 +712,8 @@ html {
     float: right;
     margin-top: 120px;
     padding: 0 70px;
+    opacity: 0;
+    transform: translateX(100px);
 }
 
 .game .game_imgBox {
@@ -661,10 +730,12 @@ html {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    opacity: 0;
 }
 
 .game .game_codeView {
-    width: 205px;
+    /* width: 205px; */
+    width: 0;
     height: 45px;
     background-color: #9253A8;
     text-align: center;
@@ -676,13 +747,15 @@ html {
     color: rgb(255, 255, 255);
     text-decoration: none;
     font-family: "Chosunilbo_myungjo";
+    opacity: 0;
 }
 
 .game .game_image {
     position: relative;
     background-image: url("../img/game.jpg");
     width: 1230px;
-    height: 615px;
+    /* height: 615px; */
+    height: 0;
 }
 
 .game .imgBoxText{
@@ -690,6 +763,7 @@ html {
     line-height: 5.5;
     color: #ffffff;
     font-size: 30px;
+    opacity: 0;
 }
 
 /* script section */
@@ -1131,13 +1205,6 @@ html {
     font-family: "Bebas Neue";
 }
 
-
-
-
-
-
-
-
-
-
-
+.otherSites a {
+    text-decoration: none;
+}

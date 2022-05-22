@@ -26,6 +26,7 @@
                 <h2 class="mainTitle">THE<br>
                     PORTFOLIO</h2>
 
+                <p class="mainPage_desc">포트폴리오 사이트입니다</p>
                 <nav class="menu">
                     <ul>
                         <li><a href="home">HOME</a></li>
@@ -75,7 +76,7 @@
 
             <div class="introduce">
                 <div class="firstPic">
-                    <img src="img/Frame 2.jpg" width="470px" height="755px" alt="firstPic">
+                    <img src="./img/picture2.jpg" width="470px" height="755px" style="opacity: 0" alt="firstpic">
                 </div>
 
                 <div class="firstIntro">
@@ -89,12 +90,18 @@
                             조립을 하면서 CPU, 메모리 등 부품들의 역할에 대해 궁금증이 생겨 검색으로 찾아보면서 프로그램과의 관계에 대해서 생각했고 프로그램이 어떻게 동작하는지, 어떻게
                             만들어지는지 관심을 가지기 시작했습니다
                             <br>
-                            그 뒤 대학교 전공을 컴퓨터공학으로 결정하였고<br>
+                            그 뒤에 대학교 전공을 컴퓨터공학으로 결정하였고<br>
                             c, c++ 등 프로그램 언어에 대해 공부했습니다</p>
                     </div>
                 </div>
                 <div class="secondPic">
-                    <img src="img/Frame 3.jpg" width="470px" height="755px" alt="secondPic">
+                    <div class="textBox">
+                        <p>프로그래밍 언어를 배우면서 주어진 문제에 대한 기능을 구현하면서 <br>
+                        코드를 보면서 이 문제에 대한 언어의 문법을 사용한 이유에 대해서 찾아보게 되었고
+                        그 과정에서 프로그래밍에 대해 더 자세히 알게 된 계기가 되었습니다
+                    </p>
+                    </div>
+                    <img src="./img/picture1.jpg" width="400px" height="545px" style="opacity: 0" alt="secondPic">
                 </div>
                 <div class="secondIntro">
                     <div class="textBox">
@@ -339,58 +346,61 @@
 
                         <span class="email_sideTitle">CONTACT</span>
                         <div class="line"></div>
-                        <span class="emailLink"><a href="mailto:placidcy@gmail.com">PLACIDCY@GMAIL.COM</a></div>span>
-                    </div>
+                        <span class="emailLink"><a href="mailto:placidcy@gmail.com">PLACIDCY@GMAIL.COM</a>
+                    </div>span>
+                </div>
+            </div>
+
+            <div class="otherInfo">
+                <span class="otherInfo_sideText1">KEEP UP TO DATE</span>
+                <span class="otherInfo_sideText2">KEEP UP TO DATE</span>
+
+                <h2 class="title">latest from the<br>develop</h2>
+
+                <div class="otherInfo_imageBox">
+                    <div class="img1 imgs"></div>
+                    <div class="img2 imgs"></div>
+                    <div class="img3 imgs"></div>
+                    <div class="img4 imgs"></div>
                 </div>
 
-                <div class="otherInfo">
-                    <span class="otherInfo_sideText1">KEEP UP TO DATE</span>
-                    <span class="otherInfo_sideText2">KEEP UP TO DATE</span>
+                <div class="otherSites">
+                    <h2 class="otherSites_title">OTHER SITES</h2>
 
-                    <h2 class="title">latest from the<br>develop</h2>
-
-                    <div class="otherInfo_imageBox">
-                        <div class="img1 imgs"></div>
-                        <div class="img2 imgs"></div>
-                        <div class="img3 imgs"></div>
-                        <div class="img4 imgs"></div>
+                    <div class="line"></div>
+                    <div class="react">
+                        <a href="#">
+                            <img src="./icons/LinkImage1.jpg" alt="react 이미지" width="25" height="25">
+                            <span class="linkText">REACT</span>
+                        </a>
                     </div>
 
-                    <div class="otherSites">
-                        <h2 class="otherSites_title">OTHER SITES</h2>
+                    <div class="line"></div>
+                    <div class="vue">
+                        <a href="#">
+                            <img src="./icons/LinkImage1.jpg" alt="react 이미지">
+                            <span class="linkText">VUE</span>
+                        </a>
+                    </div>
 
-                        <div class="line"></div>
-                        <div class="react">
-                            <a href="#">
-                                <img src="./icons/LinkImage1.jpg" alt="react 이미지" width="25" height="25">
-                                <span class="linkText">REACT</span>
-                            </a>
-                        </div>
-
-                        <div class="line"></div>
-                        <div class="vue">
-                            <a href="#">
-                                <img src="./icons/LinkImage1.jpg" alt="react 이미지">
-                                <span class="linkText">VUE</span>
-                            </a>
-                        </div>
-
-                        <div class="line"></div>
-                        <div class="github">
-                            <a href="#">
-                                <img src="./icons/LinkImage2.jpg" alt="react 이미지">
-                                <span class="linkText">GITHUB</span>
-                            </a>
-                        </div>
+                    <div class="line"></div>
+                    <div class="github">
+                        <a href="#">
+                            <img src="./icons/LinkImage2.jpg" alt="react 이미지">
+                            <span class="linkText">GITHUB</span>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+    </div>
+    </section>
 
-        <div class="scrollValue">scroll : <span></span></div>
+    <div class="scrollValue">scroll : <span></span></div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
     <script>
         const sectionBox = document.getElementById("wrap");
         const mainTitle = document.querySelector(".mainPage .mainTitle");
@@ -412,13 +422,14 @@
         const scriptDesc = document.querySelector(".script .desc");
         const contactDesc = document.querySelector(".contact .desc");
 
+        const subMenu_aboutMe = document.querySelector(".aboutMeBox .submenuBox .aboutMe");
+
         // horizental scroll
         function scroll() {
             const sectionBoxWidth = sectionBox.offsetWidth;
 
             document.body.style.height = sectionBoxWidth + "px";
             let topScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
             let totalSectionWidth = sectionBoxWidth - window.innerWidth;
             let totalSectionHeight = sectionBoxWidth - window.innerHeight;
 
@@ -437,6 +448,62 @@
 
         window.addEventListener("resize", scroll);
 
+        //codeview, sitelink
+        const standard_codeView = document.querySelector(".standard_codeView");
+        const standardView = document.querySelector(".standardView");
+
+        const mainSiteView = document.querySelector(".mainSiteView");
+        const mainSite_codeView = document.querySelector(".mainSite_codeView");
+
+        const phpView = document.querySelector(".php_codeView");
+        const php_codeView = document.querySelector(".phpView");
+
+        const reactView = document.querySelector(".reactView");
+        const react_codeView = document.querySelector(".react_codeView");
+
+        const gameView = document.querySelector(".gameView");
+        const game_codeView = document.querySelector(".game_codeView");
+
+        standard_codeView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/webs_class/tree/main/webstandard");
+        });
+
+        standardView.addEventListener("click", () => {
+            window.open("https://placidcy.github.io/webs_class/webstandard/index.html");
+        });
+
+        mainSiteView.addEventListener("click", () => {
+            window.open("https://placidcy.github.io/webs_class/");
+        });
+
+        mainSite_codeView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/webs_class");
+        });
+
+        phpView.addEventListener("click", () => {
+            window.open("http://placidness.dothome.co.kr/php/pages/main.php");
+        });
+
+        php_codeView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/php/tree/master");
+        });
+
+        reactView.addEventListener("click", () => {
+            window.open("http://placidness.dothome.co.kr/php/pages/main.php");
+        });
+
+        react_codeView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/php/tree/master");
+        });
+
+        gameView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/webs_class/tree/main/game");
+        });
+
+        game_codeView.addEventListener("click", () => {
+            window.open("https://github.com/placidcy/php/tree/master");
+        });
+
 
         // subMenu mouse hover
         // reset
@@ -445,181 +512,36 @@
         scriptBox.style.zIndex = -1;
         contactBox.style.zIndex = -1;
 
-        // backup
-        aboutMeWidth = aboutMeBox.style.width;
-        siteWidth = siteBox.style.width;
-        scriptWidth = scriptBox.style.width;
-        contactWidth = contactBox.style.width;
+        //backup
+        // aboutMeWidth = aboutMeBox.style.width;
+        // siteWidth = siteBox.style.width;
+        // scriptWidth = scriptBox.style.width;
+        // contactWidth = contactBox.style.width;
 
-        aboutMeHeight = aboutMeBox.style.height;
-        siteHeight = siteBox.style.height;
-        scriptHeight = scriptBox.style.height;
-        contactHeight = contactBox.style.height;
-
-        // aboutMeBox
-        aboutMeBox.addEventListener("mouseover", () => {
-            aboutMeBox.classList.add("hover");
-            aboutMeBox.style.width = "800px";
-
-            siteBox.style.width = "250px";
-            siteBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = "250px";
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = "250px";
-            contactBox.style.transition = "all 0.3s";
-        });
-
-        aboutMeBox.addEventListener("mouseout", () => {
-            aboutMeBox.classList.remove("hover");
-
-            aboutMeBox.style.width = aboutMeWidth;
-            aboutMeBox.style.transition = "all 0.3s";
-
-            siteBox.style.width = siteWidth;
-            siteBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = scriptWidth;
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = contactWidth;
-            contactBox.style.transition = "all 0.3s";
-        });
-
-        // siteBox
-        siteBox.addEventListener("mouseover", () => {
-            siteBox.classList.add("hover");
-
-            siteBox.style.width = "800px";
-            siteBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = "250px";
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = "250px";
-            contactBox.style.transition = "all 0.3s";
-
-        });
-
-        siteBox.addEventListener("mouseout", () => {
-            siteBox.classList.remove("hover");
-
-            siteBox.style.width = siteWidth;
-            siteBox.style.transition = "all 0.3s";
-
-            aboutMeBox.style.width = aboutMeWidth;
-            aboutMeBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = scriptWidth;
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = contactWidth;
-            contactBox.style.transition = "all 0.3s";
-        });
-
-        // scriptBox
-        scriptBox.addEventListener("mouseover", () => {
-            scriptBox.classList.add("hover");
-
-            scriptBox.style.width = "800px";
-            scriptBox.style.transition = "all 0.3s";
-
-            siteBox.style.width = "250px";
-            siteBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = "250px";
-            contactBox.style.transition = "all 0.3s";
-
-        });
-
-        scriptBox.addEventListener("mouseout", () => {
-            scriptBox.classList.remove("hover");
-
-            siteBox.style.width = siteWidth;
-            siteBox.style.transition = "all 0.3s";
-
-            aboutMeBox.style.width = aboutMeWidth;
-            aboutMeBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = scriptWidth;
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = contactWidth;
-            contactBox.style.transition = "all 0.3s";
-        });
-
-        // contactBox
-        contactBox.addEventListener("mouseover", () => {
-            contactBox.classList.add("hover");
-
-            contactBox.style.width = "800px";
-            contactBox.style.transition = "all 0.3s";
-
-            // aboutMeBox.style.width = "250px";
-            // aboutMeBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = "250px";
-            scriptBox.style.transition = "all 0.3s";
-
-            siteBox.style.width = "250px";
-            siteBox.style.transition = "all 0.3s";
-        });
-
-        contactBox.addEventListener("mouseout", () => {
-            contactBox.classList.remove("hover");
-
-            siteBox.style.width = siteWidth;
-            siteBox.style.transition = "all 0.3s";
-
-            aboutMeBox.style.width = aboutMeWidth;
-            aboutMeBox.style.transition = "all 0.3s";
-
-            scriptBox.style.width = scriptWidth;
-            scriptBox.style.transition = "all 0.3s";
-
-            contactBox.style.width = contactWidth;
-            contactBox.style.transition = "all 0.3s";
-
-        });
+        // aboutMeHeight = aboutMeBox.style.height;
+        // siteHeight = siteBox.style.height;
+        // scriptHeight = scriptBox.style.height;
+        // contactHeight = contactBox.style.height;
 
         //animations
-        // mainTitle, menu animation
+
+        //gsap scrollPlugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // mainTitle, nav, submenu opacity animation
         gsap.to(mainTitle, {
             duration: 0.4,
             ease: "sine.out",
             x: 0,
+            delay: 0.3,
             opacity: 1
         });
         gsap.to(nav, {
             duration: 0.6,
             ease: "sine.out",
             y: 0,
+            delay: 0.3,
             opacity: 1
-        });
-        gsap.from(aboutMeBox, {
-            duration: 1.0,
-            y: 800,
-            ease: "sine.out",
-            delay: 0.3
-        });
-        gsap.from(siteBox, {
-            duration: 1.0,
-            y: 800,
-            ease: "sine.out",
-            delay: 0.6
-        });
-        gsap.from(scriptBox, {
-            duration: 1.0,
-            y: 800,
-            ease: "sine.out",
-            delay: 0.9
-        });
-        gsap.from(contactBox, {
-            duration: 1.0,
-            y: 800,
-            ease: "sine.out",
-            delay: 1.2
         });
 
         gsap.to(aboutMeTitle, {
@@ -634,18 +556,552 @@
             delay: 1.6,
             opacity: 1
         });
+
         gsap.to(scriptTitle, {
             duration: 1.0,
             ease: "sine.out",
             delay: 1.9,
             opacity: 1
         });
+
         gsap.to(contactTitle, {
             duration: 1.0,
             ease: "sine.out",
             delay: 2.1,
             opacity: 1
         });
+
+        // subMenu
+        gsap.to(aboutMeBox, {
+            duration: 1.0,
+            height: "450px",
+            delay: 0.3
+        });
+
+        gsap.to(siteBox, {
+            duration: 1.0,
+            height: "600px",
+            delay: 0.6
+        });
+
+        gsap.to(scriptBox, {
+            duration: 1.0,
+            height: "750px",
+            delay: 0.9
+        });
+
+        gsap.to(contactBox, {
+            duration: 1.0,
+            height: "660px",
+            delay: 1.2
+        });
+
+        //subMenu animation
+        aboutMeBox.addEventListener("mouseover", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: "600px"
+            });
+            gsap.to(siteBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: "400px"
+            });
+            gsap.to(scriptBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: "400px"
+            });
+            gsap.to(contactBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: "400px"
+            });
+        });
+
+        aboutMeBox.addEventListener("mouseleave", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: aboutMeHeight
+            });
+            gsap.to(siteBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: siteHeight
+            });
+            gsap.to(scriptBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: scriptHeight
+            });
+            gsap.to(contactBox, {
+                duration: 0.5,
+                ease: "sine.out",
+                height: contactHeight
+            });
+        });
+
+        // // aboutMeBox
+        // aboutMeBox.addEventListener("mouseover", () => {
+        //     aboutMeBox.style.height = "600px";
+
+        //     siteBox.style.height = "250px";
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.height = "250px";
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.height = "250px";
+        //     contactBox.style.transition = "all 0.3s";
+        // });
+
+        // aboutMeBox.addEventListener("mouseout", () => {
+        //     aboutMeBox.style.height = aboutMeHeight;
+        //     aboutMeBox.style.transition = "all 0.3s";
+
+        //     siteBox.style.height = siteHeight;
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.width = scriptHeight;
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = contactHeight;
+        //     contactBox.style.transition = "all 0.3s";
+        // });
+
+        // //siteBox
+        // siteBox.addEventListener("mouseover", () => {
+        //     siteBox.style.width = "800px";
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.width = "250px";
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = "250px";
+        //     contactBox.style.transition = "all 0.3s";
+
+        // });
+
+        // siteBox.addEventListener("mouseout", () => {
+        //     siteBox.style.width = siteWidth;
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     aboutMeBox.style.width = aboutMeWidth;
+        //     aboutMeBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.width = scriptWidth;
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = contactWidth;
+        //     contactBox.style.transition = "all 0.3s";
+        // });
+
+        // //scriptBox
+        // scriptBox.addEventListener("mouseover", () => {
+        //     scriptBox.style.width = "800px";
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     siteBox.style.width = "250px";
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = "250px";
+        //     contactBox.style.transition = "all 0.3s";
+
+        // });
+
+        // scriptBox.addEventListener("mouseout", () => {
+        //     siteBox.style.width = siteWidth;
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     aboutMeBox.style.width = aboutMeWidth;
+        //     aboutMeBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.width = scriptWidth;
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = contactWidth;
+        //     contactBox.style.transition = "all 0.3s";
+        // });
+
+        // //contactBox
+        // contactBox.addEventListener("mouseover", () => {
+        //     contactBox.classList.add("hover");
+
+        //     contactBox.style.width = "800px";
+        //     contactBox.style.transition = "all 0.3s"
+
+        //     scriptBox.style.width = "250px";
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     siteBox.style.width = "250px";
+        //     siteBox.style.transition = "all 0.3s";
+        // });
+
+        // contactBox.addEventListener("mouseout", () => {
+        //     contactBox.classList.remove("hover");
+
+        //     siteBox.style.width = siteWidth;
+        //     siteBox.style.transition = "all 0.3s";
+
+        //     aboutMeBox.style.width = aboutMeWidth;
+        //     aboutMeBox.style.transition = "all 0.3s";
+
+        //     scriptBox.style.width = scriptWidth;
+        //     scriptBox.style.transition = "all 0.3s";
+
+        //     contactBox.style.width = contactWidth;
+        //     contactBox.style.transition = "all 0.3s";
+        // });
+
+        // aboutMe submenu
+        function increateHeightOfaboutMe() {
+            if (window.scrollY >= 800 && window.scrollY <= 2600) {
+                gsap.to(subMenu_aboutMe, {
+                    duration: 0.6,
+                    ease: "sine.out",
+                    height: "440px"
+                });
+
+            } else if (window.scrollY < 450 || window.scrollY > 2600) {
+                gsap.to(subMenu_aboutMe, {
+                    duration: 0.6,
+                    ease: "sine.out",
+                    height: "0"
+                });
+            }
+        }
+
+        function controlSectionAnimation() {
+            if (window.scrollY >= 1300) {
+                gsap.to(".firstPic", {
+                    duration: 0.6,
+                    height: "810px"
+                });
+
+                gsap.to(".firstPic img", {
+                    duration: 0.6,
+                    delay: 0.6,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 2000) {
+                gsap.to(".firstIntro h2", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+
+                gsap.to(".firstIntro p", {
+                    duration: 0.6,
+                    delay: 0.4,
+                    y: 0,
+                    opacity: 1
+                });
+
+                gsap.to(".firstIntro", {
+                    duration: 0.6,
+                    height: "900px"
+                });
+            }
+
+            if (window.scrollY >= 2400) {
+                gsap.to(".secondPic", {
+                    duration: 0.6,
+                    height: "810px"
+                });
+
+                gsap.to(".secondPic img", {
+                    duration: 0.6,
+                    delay: 0.6,
+                    opacity: 1
+                });
+
+                gsap.to(".secondPic .textBox", {
+                    duration: 0.6,
+                    delay: 0.6,
+                    opacity: 1,
+                    y: 0
+                });
+            }
+
+            if (window.scrollY >= 2900) {
+                gsap.to(".secondIntro", {
+                    duration: 0.6,
+                    height: "735px"
+                });
+
+                gsap.to(".secondIntro h2", {
+                    duration: 0.6,
+                    delay: 0.4,
+                    opacity: 1,
+                    x: 0
+                });
+
+                gsap.to(".secondIntro p", {
+                    duration: 0.6,
+                    delay: 0.7,
+                    opacity: 1,
+                    y: 0
+                });
+            }
+
+            if (window.scrollY >= 4000 && window.scrollY < 6250) {
+                gsap.to(".siteWork .site", {
+                    duration: 0.6,
+                    height: "500px"
+                });
+                gsap.to(".siteWork .siteWorkSubMenu .text", {
+                    duration: 0.6,
+                    y: 0,
+                    opacity: 1,
+                    delay: 0.5
+                });
+            } else if (window.scrollY < 3900 || window.scrollY > 6250) {
+                gsap.to(".siteWork .site", {
+                    duration: 0.6,
+                    height: "50px"
+                });
+                gsap.to(".siteWork .siteWorkSubMenu .text", {
+                    duration: 0.6,
+                    y: 0,
+                    opacity: 0
+                });
+            }
+
+
+            if (window.scrollY >= 4900) {
+                gsap.to(".siteWorkSection", {
+                    duration: 0.6,
+                    height: "860px"
+                });
+                gsap.to(".webStandard h2", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0
+                });
+                gsap.to(".webStandard .webStandardText", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.4
+                });
+            }
+
+            if (window.scrollY >= 5350) {
+                gsap.to(".webStandard .standard_codeView", {
+                    duration: 0.6,
+                    delay: 1.0,
+                    width: "205px"
+                });
+                gsap.to(".webStandard .standard_codeView a", {
+                    duration: 0.6,
+                    delay: 1.3,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".webStandard .standard_image", {
+                    duration: 0.6,
+                    delay: 0.4,
+                    height: "615px"
+                });
+            }
+
+            if (window.scrollY >= 6100) {
+                gsap.to(".webStandard .standardView", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+                gsap.to(".webStandard .standardView .imgBoxText", {
+                    duration: 0.6,
+                    delay: 0.4,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 6700) {
+                gsap.to(".mainSite h2", {
+                    duration: 0.6,
+                    delay: 0.5,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".mainSite .mainSite_image", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if (window.scrollY >= 8100) {
+                gsap.to(".mainSite .mainSite_codeView", {
+                    duration: 0.6,
+                    width: "205px"
+                });
+                gsap.to(".mainSite .mainSite_codeView a", {
+                    duration: 0.6,
+                    delay: 0.8,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".mainSite .mainSiteText", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".mainSite .mainSiteView", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".mainSite .imgBoxText", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 8700) {
+                gsap.to(".php h2", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".php .phpText", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0
+                });
+
+                gsap.to(".php .php_codeView", {
+                    duration: 0.6,
+                    width: "205px"
+                });
+                gsap.to(".php .php_codeView a", {
+                    duration: 0.6,
+                    delay: 0.8,
+                    x: 0,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 9050) {
+                gsap.to(".php .php_image", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if (window.scrollY >= 10300) {
+                gsap.to(".php .phpView", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+                gsap.to(".php .imgBoxText", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+            }
+
+            // react
+            if (window.scrollY >= 10800) {
+                gsap.to(".react h2", {
+                    duration: 0.6,
+                    x: 0,
+                    delay: 0.3,
+                    opacity: 1
+                });
+                gsap.to(".react .react_image", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if (window.scrollY >= 11700) {
+                gsap.to(".react .reactView", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+                gsap.to(".react .imgBoxText", {
+                    duration: 0.6,
+                    delay: 0.3,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 12000) {
+                gsap.to(".react .react_codeView", {
+                    duration: 0.6,
+                    width: "205px"
+                });
+                gsap.to(".react .react_codeView a", {
+                    duration: 0.6,
+                    delay: 0.8,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".react .reactText", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+            }
+
+            // game
+            if (window.scrollY >= 12500) {
+                gsap.to(".game h2", {
+                    duration: 0.6,
+                    x: 0,
+                    delay: 0.3,
+                    opacity: 1
+                });
+                gsap.to(".game .game_codeView", {
+                    duration: 0.6,
+                    width: "205px"
+                });
+                gsap.to(".game .game_codeView a", {
+                    duration: 0.6,
+                    delay: 0.8,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".game .game_image", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if (window.scrollY >= 13500) {
+                gsap.to(".game .imgBoxText", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+                gsap.to(".game .gameView", {
+                    duration: 0.6,
+                    x: 0,
+                    delay: 0.4,
+                    opacity: 1
+                });
+            }
+
+            if (window.scrollY >= 14000) {
+                gsap.to(".game .imgBoxText", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+                gsap.to(".game .gameText", {
+                    duration: 0.6,
+                    x: 0,
+                    opacity: 1
+                });
+            }
+
+        }
+
+        window.addEventListener("scroll", increateHeightOfaboutMe);
+        window.addEventListener("scroll", controlSectionAnimation);
     </script>
 </body>
 
