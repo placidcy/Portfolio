@@ -575,25 +575,25 @@
         gsap.to(aboutMeBox, {
             duration: 1.0,
             height: "450px",
-            delay: 0.3
+            delay: 0.5
         });
 
         gsap.to(siteBox, {
             duration: 1.0,
             height: "600px",
-            delay: 0.6
+            delay: 0.9
         });
 
         gsap.to(scriptBox, {
             duration: 1.0,
             height: "750px",
-            delay: 0.9
+            delay: 1.4
         });
 
         gsap.to(contactBox, {
             duration: 1.0,
             height: "660px",
-            delay: 1.2
+            delay: 1.8
         });
 
         gsap.to(".mainPage_desc", {
@@ -635,22 +635,18 @@
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.5,
-                ease: "sine.out",
                 height: "600px"
             });
             gsap.to(siteBox, {
                 duration: 0.5,
-                ease: "sine.out",
                 height: "400px"
             });
             gsap.to(scriptBox, {
                 duration: 0.5,
-                ease: "sine.out",
                 height: "400px"
             });
             gsap.to(contactBox, {
                 duration: 0.5,
-                ease: "sine.out",
                 height: "400px"
             });
         });
@@ -658,23 +654,22 @@
         aboutMeBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.5,
-                ease: "sine.out",
-                height: aboutMeHeight
+                height: "450px"
             });
+
             gsap.to(siteBox, {
                 duration: 0.5,
-                ease: "sine.out",
-                height: siteHeight
+                height: "600px"
             });
+
             gsap.to(scriptBox, {
                 duration: 0.5,
-                ease: "sine.out",
-                height: scriptHeight
+                height: "750px"
             });
+
             gsap.to(contactBox, {
                 duration: 0.5,
-                ease: "sine.out",
-                height: contactHeight
+                height: "660px"
             });
         });
 
