@@ -90,6 +90,8 @@ html {
     position: absolute;
     left: 20px;
     bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .subMenu .aboutMe .subTitle {
@@ -115,6 +117,8 @@ html {
     position: absolute;
     left: 20px;
     bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .subMenu .site .subTitle {
@@ -149,6 +153,8 @@ html {
     position: absolute;
     left: 20px;
     bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .subMenu .contact {
@@ -174,6 +180,8 @@ html {
     position: absolute;
     left: 20px;
     bottom: 20px;
+    opacity: 0;
+    transform: translateX(-30px);
 }
 
 .scrollValue {
