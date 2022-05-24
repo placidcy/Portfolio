@@ -406,6 +406,7 @@
         const lscroll = new locomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
             smooth: true,
+            direction: "horizontal"
         });
     </script>
 
@@ -448,28 +449,34 @@
         const game_codeView = document.querySelector(".game_codeView");
 
         // horizental scroll
-        function scroll() {
-            const sectionBoxWidth = sectionBox.offsetWidth;
+        // function scroll() {
+        //     const sectionBoxWidth = sectionBox.offsetWidth;
 
-            document.body.style.height = sectionBoxWidth + "px";
+        //     document.body.style.height = sectionBoxWidth + "px";
+        //     let topScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+        //     let totalSectionWidth = sectionBoxWidth - window.innerWidth;
+        //     let totalSectionHeight = sectionBoxWidth - window.innerHeight;
+
+        //     let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
+
+        //     document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
+
+        //     gsap.to(sectionBox, {
+        //         left: -toLeftValue
+        //     });
+
+        //     requestAnimationFrame(scroll);
+        // }
+
+        // scroll();
+
+        // window.addEventListener("resize", scroll);
+
+        window.addEventListener("scroll", () => {
             let topScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-            let totalSectionWidth = sectionBoxWidth - window.innerWidth;
-            let totalSectionHeight = sectionBoxWidth - window.innerHeight;
-
-            let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
 
             document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
-
-            gsap.to(sectionBox, {
-                left: -toLeftValue
-            });
-
-            requestAnimationFrame(scroll);
-        }
-
-        scroll();
-
-        window.addEventListener("resize", scroll);
+        });
 
         //codeview, sitelink
         standard_codeView.addEventListener("click", () => {
