@@ -1,37 +1,3 @@
-/* mainPage */
-html {
-    scroll-behavior: smooth;
-}
-
-#wrap {
-    background-color: #F5EEEC;
-    position: fixed;
-    display: flex;
-}
-
-.mainPage {
-    width: 100vw;
-}
-
-.mainPage .mainTitle {
-    transform: translateX(-100px);
-    opacity: 0;
-    font-size: 139px;
-    font-family: "Sulphur Point";
-    margin-left: 100px;
-    margin-top: 50px;
-    line-height: 0.9;
-}
-
-.mainPage_desc {
-    margin-left: 105px;
-    margin-top: 15px;
-    font-family: "IropkeBatang";
-    font-size: 16px;
-    opacity: 0;
-    transform: translateX(-50px);
-}
-
 /* locomotive-scroll */
 html.has-scroll-smooth {
     overflow: hidden;
@@ -121,6 +87,36 @@ html.has-scroll-dragging {
     bottom: 0;
 }
 
+/* mainPage */
+#wrap {
+    background-color: #F5EEEC;
+    display: flex;
+}
+
+.mainPage {
+    width: 100vw;
+}
+
+.mainPage .mainTitle {
+    transform: translateX(-100px);
+    opacity: 0;
+    font-size: 139px;
+    font-family: "Sulphur Point";
+    margin-left: 100px;
+    margin-top: 50px;
+    line-height: 0.9;
+}
+
+.mainPage_desc {
+    margin-left: 105px;
+    margin-top: 15px;
+    font-family: "IropkeBatang";
+    font-size: 16px;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+
 /* header */
 .header {
     position: relative;
@@ -165,17 +161,12 @@ html.has-scroll-dragging {
     margin-right: 0;
     color: black;
     cursor: pointer;
-
-    transition:
-        width 0.5s cubic-bezier(0, 1.45, 0.62, 1.3),
-        height 0.8s cubic-bezier(0, 0.73, 0.14, 1.2),
-        border-radius 0.3s cubic-bezier(0, 1.45, 0.62, 1.3);
 }
 
 .subMenu .aboutMe {
     width: 411px;
     height: 500px;
-    height: 0;
+    height: 50px;
     background-color: #F0A398;
     position: relative;
 }
@@ -201,7 +192,6 @@ html.has-scroll-dragging {
 
 .subMenu .site {
     width: 560px;
-    height: 635px;
     height: 0;
     background-color: #BA85CC;
     position: relative;
@@ -255,7 +245,6 @@ html.has-scroll-dragging {
 
 .subMenu .contact {
     width: 360px;
-    height: 700px;
     height: 0;
     background-color: #FFD395;
     position: relative;
@@ -269,7 +258,6 @@ html.has-scroll-dragging {
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    z-index: -2;
 }
 
 .subMenu .contact .desc {
@@ -305,7 +293,7 @@ html.has-scroll-dragging {
 
 .submenuBox .aboutMe {
     width: 445px;
-    height: 425px;
+    height: 50px;
     background-color: #F0A398;
 }
 
