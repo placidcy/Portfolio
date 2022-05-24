@@ -20,13 +20,13 @@
 </head>
 
 <body>
-    <div id="wrap" data-scroll-container>
+    <main id="wrap" data-scroll-container>
         <section class="mainPage">
             <header class="header">
                 <h2 class="mainTitle">THE<br>
                     PORTFOLIO</h2>
 
-                <p class="mainPage_desc">포트폴리오 사이트입니다</p>
+                <p class="mainPage_desc">지금까지 배운 웹 개발 내용을 기반으로 만든<br>포트폴리오 사이트입니다</p>
                 <nav class="menu">
                     <ul>
                         <li><a href="home">HOME</a></li>
@@ -87,7 +87,8 @@
                             단순히 부품을 교체하는 일이였고 컴퓨터에 대해 전혀 몰랐었지만 직접 웹사이트에서 검색하면서 영상을 찾아보고 따라 하면서 조립을 하였고 제대로 동작했을때 흥미를
                             느꼈습니다<br>
                             <br>
-                            조립을 하면서 CPU, 메모리 등 부품들의 역할에 대해 궁금증이 생겨 검색으로 찾아보면서 프로그램과의 관계에 대해서 생각했고 프로그램이 어떻게 동작하는지, 어떻게
+                            조립을 하면서 CPU, 메모리 등 부품들의 역할에 대해 궁금증이 생겨 검색으로 찾아보면서 프로그램과의 관계에 대해서 생각했고 프로그램이 어떻게 동작하는지,
+                            어떻게
                             만들어지는지 관심을 가지기 시작했습니다
                             <br>
                             그 뒤에 대학교 전공을 컴퓨터공학으로 결정하였고<br>
@@ -109,10 +110,12 @@
                         <p>개인적인 이유로 전공과 다른 일을 하던 도중<br>
                             다시 제가 관심 있는 프로그램 개발에 대해 생각했고<br>
                             어떤 개발을 할지 고민하던 중에 브라우저의 개발자 도구라는 <br>
-                            옵션을 봤고 화면에는 제가 모르는 언어들로 된 코드들이 있었습니다, 이 코드들이 어떤 언어로 작성되었고 어떻게 개발되었는지 알고 싶었고 배울수 있는 방법을 찾던 중에
+                            옵션을 봤고 화면에는 제가 모르는 언어들로 된 코드들이 있었습니다, 이 코드들이 어떤 언어로 작성되었고 어떻게 개발되었는지 알고 싶었고 배울수 있는 방법을
+                            찾던 중에
                             국비지원이라는 제도를 찾았습니다<br>
                             <br>
-                            웹 개발이라는 것이 저에게는 낯설었고 제 예상과는 다르게 국비지원 훈련과정에는 웹 개발 관련 수업들이 많이 보였고 여러 훈련기관의 수강 후기를 꼼꼼하게 찾아 본뒤 한
+                            웹 개발이라는 것이 저에게는 낯설었고 제 예상과는 다르게 국비지원 훈련과정에는 웹 개발 관련 수업들이 많이 보였고 여러 훈련기관의 수강 후기를 꼼꼼하게 찾아
+                            본뒤 한
                             훈련기관을 선택하고 수강했습니다</p>
                     </div>
                 </div>
@@ -197,7 +200,8 @@
                     <span class="reactText">REACT를 활용한 웹사이트입니다<br>
                         각각 영역을 구성하는 태그들을 컴포넌트로 만들어 나누었습니다<br>
                         JSON 파일을 이용해 데이터를 불러오도록 처리하였고<br>
-                        유튜브 API와 themoviedb API 기능을 사용해서 검색어에 해당하는 동영상과 영화 목록들을 불러올 수 있고 이미지를 클릭하면 해당 동영상이나 영화 페이지로 이동할
+                        유튜브 API와 themoviedb API 기능을 사용해서 검색어에 해당하는 동영상과 영화 목록들을 불러올 수 있고 이미지를 클릭하면 해당 동영상이나 영화 페이지로
+                        이동할
                         수 있습니다
 
                         <div class="react_codeView"><a href="#">코드 보기</a></div>
@@ -392,8 +396,8 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </section>
+        </section>
+    </main>
 
     <div class="scrollValue">scroll : <span></span></div>
     </div>
@@ -471,12 +475,6 @@
         // scroll();
 
         // window.addEventListener("resize", scroll);
-
-        window.addEventListener("scroll", () => {
-            let topScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-            document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
-        });
 
         //codeview, sitelink
         standard_codeView.addEventListener("click", () => {
@@ -646,7 +644,7 @@
                 duration: 0.3,
                 width: "250px"
             });
-            
+
             // gsap.to(contactBox, {
             //     duration: 0.5,
             // });
@@ -787,7 +785,7 @@
         // });
 
         // aboutMe submenu
-        function increateHeightOfaboutMe() {
+        function runAboutMeAnimation() {
             if (window.scrollY >= 800 && window.scrollY <= 2600) {
                 gsap.to(subMenu_aboutMe, {
                     duration: 0.6,
@@ -805,6 +803,7 @@
         }
 
         function controlSectionAnimation() {
+            // introduce
             if (window.scrollY >= 1300) {
                 gsap.to(".firstPic", {
                     duration: 0.6,
@@ -1131,8 +1130,17 @@
 
         }
 
-        window.addEventListener("scroll", increateHeightOfaboutMe);
-        window.addEventListener("scroll", controlSectionAnimation);
+        window.addEventListener("scroll", () => {
+            let topScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
+
+            runAboutMeAnimation();
+            controlSectionAnimation();
+        });
+
+        // window.addEventListener("scroll", increateHeightOfaboutMe);
+        // window.addEventListener("scroll", controlSectionAnimation);
     </script>
 </body>
 
