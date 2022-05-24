@@ -131,7 +131,7 @@ html.has-scroll-dragging {
     position: absolute;
     transform: translateY(-150px);
     right: 40px;
-    top: 25px;
+    top: 10px;
     opacity: 0;
 }
 
