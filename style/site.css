@@ -16,11 +16,11 @@ html {
 .mainPage .mainTitle {
     transform: translateX(-100px);
     opacity: 0;
-    font-size: 130px;
+    font-size: 139px;
     font-family: "Sulphur Point";
     margin-left: 100px;
     margin-top: 50px;
-    line-height: 1.0;
+    line-height: 0.9;
 }
 
 .mainPage_desc {
@@ -30,6 +30,95 @@ html {
     font-size: 20px;
     opacity: 0;
     transform: translateX(-50px);
+}
+
+/* locomotive-scroll */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100%;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.c-scrollbar:hover {
+    transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+    opacity: 1;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar {
+    width: 100%;
+    height: 10px;
+    top: auto;
+    bottom: 0;
+    transform: scaleY(1);
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+    transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}
+
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+    right: auto;
+    bottom: 0;
 }
 
 /* header */
@@ -51,7 +140,7 @@ html {
     justify-content: space-between;
 }
 
-.menu ul li{
+.menu ul li {
     list-style: none;
     margin-right: 30px;
 }
@@ -67,7 +156,7 @@ html {
     position: absolute;
     bottom: 0;
     display: flex;
-    align-items: flex-end;
+    align-items: end;
     margin-left: 130px;
 }
 
@@ -80,7 +169,7 @@ html {
 
 .subMenu .aboutMe {
     width: 411px;
-    /* height: 450px; */
+    /* height: 500px; */
     height: 0;
     background-color: #F0A398;
     position: relative;
@@ -106,7 +195,7 @@ html {
 
 .subMenu .site {
     width: 560px;
-    /* height: 600px; */
+    /* height: 635px; */
     height: 0;
     background-color: #BA85CC;
     position: relative;
@@ -124,6 +213,7 @@ html {
 .subMenu .site .subTitle {
     font-size: 400px;
     font-family: 'Porter Sans Block';
+    transform: translate(0, 0);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -133,7 +223,7 @@ html {
 
 .subMenu .script {
     width: 345px;
-    /* height: 750px; */
+    /* height: 790px; */
     height: 0;
     background-color: #85B2CC;
     position: relative;
@@ -159,7 +249,7 @@ html {
 
 .subMenu .contact {
     width: 360px;
-    /* height: 660px; */
+    /* height: 700px; */
     height: 0;
     background-color: #FFD395;
     position: relative;
@@ -297,7 +387,7 @@ html {
     position: relative;
 }
 
-.secondPic img{
+.secondPic img {
     margin-left: 70px;
     margin-top: 20px;
 }
@@ -311,6 +401,7 @@ html {
     opacity: 0;
     transform: translateY(-60px);
 }
+
 .secondIntro {
     width: 535px;
     /* height: 735px; */
@@ -318,7 +409,7 @@ html {
     background-color: #E26747;
 }
 
-.secondIntro h2{
+.secondIntro h2 {
     font-size: 50px;
     font-family: "Chosunilbo_myungjo";
     color: white;
@@ -341,7 +432,7 @@ html {
 }
 
 /* siteWork page */
-.siteWork{
+.siteWork {
     position: relative;
     height: 100vh;
     margin-left: 200px;
@@ -426,7 +517,7 @@ html {
     transform: translateX(-130px);
 }
 
-.webStandard .standard_imgBox{
+.webStandard .standard_imgBox {
     position: relative;
     float: right;
     position: absolute;
@@ -454,7 +545,7 @@ html {
     height: 0;
 }
 
-.webStandard .standardView .imgBoxText{
+.webStandard .standardView .imgBoxText {
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -481,7 +572,7 @@ html {
 }
 
 /* mainSite */
-.siteWorkSection .mainSite{
+.siteWorkSection .mainSite {
     margin-left: 300px;
     overflow: hidden;
     width: 85vw;
@@ -502,7 +593,7 @@ html {
     width: 320px;
     line-height: 2.0;
     float: right;
-    transform: translateY(-370px) translateX(130px); 
+    transform: translateY(-370px) translateX(130px);
     opacity: 0;
 }
 
@@ -546,7 +637,7 @@ html {
     opacity: 0;
 }
 
-.mainSite .imgBoxText{
+.mainSite .imgBoxText {
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -555,7 +646,7 @@ html {
 }
 
 /* php */
-.siteWorkSection .php{
+.siteWorkSection .php {
     margin-left: 300px;
     overflow: hidden;
     width: 85vw;
@@ -629,7 +720,7 @@ html {
     opacity: 0;
 }
 
-.php .imgBoxText{
+.php .imgBoxText {
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -638,7 +729,7 @@ html {
 }
 
 /* react */
-.siteWorkSection .react{
+.siteWorkSection .react {
     margin-left: 300px;
     overflow: hidden;
     width: 85vw;
@@ -698,7 +789,7 @@ html {
     opacity: 0;
 }
 
-.react .imgBoxText{
+.react .imgBoxText {
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -707,7 +798,7 @@ html {
 }
 
 /* game */
-.siteWorkSection .game{
+.siteWorkSection .game {
     margin-left: 300px;
     width: 90vw;
     position: relative;
@@ -775,7 +866,7 @@ html {
     height: 0;
 }
 
-.game .imgBoxText{
+.game .imgBoxText {
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -792,24 +883,24 @@ html {
     display: flex;
 }
 
-.scriptSection .scriptSubMenu{
+.scriptSection .scriptSubMenu {
     display: flex;
     align-items: flex-end;
 }
 
-.scriptSection .scriptSubMenu .aboutMe{
+.scriptSection .scriptSubMenu .aboutMe {
     width: 205px;
     height: 50px;
     background-color: #F0A398;
 }
 
-.scriptSection .scriptSubMenu .site{
+.scriptSection .scriptSubMenu .site {
     width: 205px;
     height: 50px;
     background-color: #BA85CC;
 }
 
-.scriptSection .scriptSubMenu .script{
+.scriptSection .scriptSubMenu .script {
     width: 411px;
     height: 500px;
     background-color: #85B2CC;
@@ -822,7 +913,7 @@ html {
     margin: 50px 50px;
 }
 
-.scriptSection .scriptSubMenu .contact{
+.scriptSection .scriptSubMenu .contact {
     width: 205px;
     height: 50px;
     background-color: #FFD395;
@@ -843,7 +934,7 @@ html {
     bottom: 0;
 }
 
-.scriptSection .scriptContents{
+.scriptSection .scriptContents {
     background-color: #ffddd4;
     width: 230vw;
     height: 85vh;
@@ -890,8 +981,7 @@ html {
     width: 1230px;
 }
 
-.mouseEffect iframe {
-}
+.mouseEffect iframe {}
 
 .mouseEffect .mouse_subtitle {
     display: block;
@@ -920,8 +1010,7 @@ html {
     width: 1230px;
 }
 
-.sliderEffect iframe {
-}
+.sliderEffect iframe {}
 
 .sliderEffect .slider_subtitle {
     display: block;
@@ -950,8 +1039,7 @@ html {
     width: 1230px;
 }
 
-.parallaxEffect iframe {
-}
+.parallaxEffect iframe {}
 
 .parallaxEffect .parallax_subtitle {
     display: block;
@@ -989,30 +1077,30 @@ html {
     text-align: left;
 }
 
-.contactSection .contactSubMenu{
+.contactSection .contactSubMenu {
     display: flex;
     align-items: flex-end;
 }
 
-.contactSection .contactSubMenu .aboutMe{
+.contactSection .contactSubMenu .aboutMe {
     width: 205px;
     height: 50px;
     background-color: #F0A398;
 }
 
-.contactSection .contactSubMenu .site{
+.contactSection .contactSubMenu .site {
     width: 205px;
     height: 50px;
     background-color: #BA85CC;
 }
 
-.contactSection .contactSubMenu .script{
+.contactSection .contactSubMenu .script {
     width: 205px;
     height: 50px;
     background-color: #85B2CC;
 }
 
-.contactSection .contactSubMenu .contact{
+.contactSection .contactSubMenu .contact {
     width: 411px;
     height: 500px;
     background-color: #FFD395;
@@ -1035,7 +1123,7 @@ html {
     overflow: hidden;
 }
 
-.location .sideText{
+.location .sideText {
     font-size: 20px;
     font-family: "Bebas Neue";
     position: absolute;
@@ -1044,7 +1132,7 @@ html {
     transform: rotate(90deg);
 }
 
-.location h2{
+.location h2 {
     font-size: 300px;
     font-family: "Bebas Neue";
     margin-top: 280px;
@@ -1087,7 +1175,7 @@ html {
 
 }
 
-.emailSection .email_title{
+.emailSection .email_title {
     font-size: 300px;
     font-family: "Bebas Neue";
     margin-top: 230px;
@@ -1106,7 +1194,7 @@ html {
     font-size: 20px;
 }
 
-.emailSection .emailLink a{
+.emailSection .emailLink a {
     font-family: "Bebas Neue";
     font-size: 20px;
     text-decoration: none;
@@ -1134,7 +1222,7 @@ html {
     position: relative;
 }
 
-.otherInfo_sideText1{
+.otherInfo_sideText1 {
     color: white;
     font-size: 20px;
     font-family: "Bebas Neue";
@@ -1144,7 +1232,7 @@ html {
     top: 180px;
 }
 
-.otherInfo_sideText2{
+.otherInfo_sideText2 {
     color: white;
     font-size: 20px;
     font-family: "Bebas Neue";
@@ -1182,6 +1270,7 @@ html {
     height: 200px;
     background: url(../img/otherInfo_image2.jpg);
 }
+
 .otherInfo_imageBox .img3 {
     width: 250px;
     height: 200px;
@@ -1203,7 +1292,7 @@ html {
     vertical-align: middle;
 }
 
-.otherSites .otherSites_title{
+.otherSites .otherSites_title {
     font-size: 20px;
     font-family: "Bebas Neue";
     color: white;
@@ -1216,7 +1305,7 @@ html {
     margin: 20px 0;
 }
 
-.otherSites .linkText{
+.otherSites .linkText {
     color: white;
     font-size: 18px;
     font-family: "Bebas Neue";

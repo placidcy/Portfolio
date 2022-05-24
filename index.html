@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap" data-scroll-container>
         <section class="mainPage">
             <header class="header">
                 <h2 class="mainTitle">THE<br>
@@ -76,7 +76,7 @@
 
             <div class="introduce">
                 <div class="firstPic">
-                    <img src="./img/picture2.jpg" width="470px" height="755px" style="opacity: 0" alt="firstpic">
+                    <img src="./img/Frame 2.jpg" width="470px" height="755px" style="opacity: 0" alt="firstpic">
                 </div>
 
                 <div class="firstIntro">
@@ -101,7 +101,7 @@
                             그 과정에서 프로그래밍에 대해 더 자세히 알게 된 계기가 되었습니다
                         </p>
                     </div>
-                    <img src="./img/picture1.jpg" width="400px" height="545px" style="opacity: 0" alt="secondPic">
+                    <img src="./img/Frame 3.jpg" width="400px" height="545px" style="opacity: 0" alt="secondPic">
                 </div>
                 <div class="secondIntro">
                     <div class="textBox">
@@ -172,7 +172,7 @@
                     <h2>MAIN SITE</h2>
                 </div>
 
-                <div class="php ">
+                <div class="php">
                     <h2>PHP</h2>
                     <span class="phpText">PHP 기능을 활용한 웹사이트입니다<br>
                         메인 페이지의 이미지는 슬라이드 효과를 추가하였고 회원가입과 로그인을 할수 있습니다<br>
@@ -400,6 +400,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script type="module">
+        import locomotiveScroll from "https://cdn.skypack.dev/locomotive-scroll@4.0.6";
+
+        const lscroll = new locomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+        });
+    </script>
 
     <script>
         const sectionBox = document.getElementById("wrap");
@@ -423,6 +431,21 @@
         const contactDesc = document.querySelector(".contact .desc");
 
         const subMenu_aboutMe = document.querySelector(".aboutMeBox .submenuBox .aboutMe");
+
+        const standard_codeView = document.querySelector(".standard_codeView");
+        const standardView = document.querySelector(".standardView");
+
+        const mainSiteView = document.querySelector(".mainSiteView");
+        const mainSite_codeView = document.querySelector(".mainSite_codeView");
+
+        const phpView = document.querySelector(".php_codeView");
+        const php_codeView = document.querySelector(".phpView");
+
+        const reactView = document.querySelector(".reactView");
+        const react_codeView = document.querySelector(".react_codeView");
+
+        const gameView = document.querySelector(".gameView");
+        const game_codeView = document.querySelector(".game_codeView");
 
         // horizental scroll
         function scroll() {
@@ -449,21 +472,6 @@
         window.addEventListener("resize", scroll);
 
         //codeview, sitelink
-        const standard_codeView = document.querySelector(".standard_codeView");
-        const standardView = document.querySelector(".standardView");
-
-        const mainSiteView = document.querySelector(".mainSiteView");
-        const mainSite_codeView = document.querySelector(".mainSite_codeView");
-
-        const phpView = document.querySelector(".php_codeView");
-        const php_codeView = document.querySelector(".phpView");
-
-        const reactView = document.querySelector(".reactView");
-        const react_codeView = document.querySelector(".react_codeView");
-
-        const gameView = document.querySelector(".gameView");
-        const game_codeView = document.querySelector(".game_codeView");
-
         standard_codeView.addEventListener("click", () => {
             window.open("https://github.com/placidcy/webs_class/tree/main/webstandard");
         });
@@ -505,25 +513,7 @@
         });
 
 
-        // subMenu mouse hover
-        // reset
-        aboutMeBox.style.zIndex = -2;
-        siteBox.style.zIndex = -3;
-        scriptBox.style.zIndex = -1;
-        contactBox.style.zIndex = -1;
-
-        //backup
-        // aboutMeWidth = aboutMeBox.style.width;
-        // siteWidth = siteBox.style.width;
-        // scriptWidth = scriptBox.style.width;
-        // contactWidth = contactBox.style.width;
-
-        // aboutMeHeight = aboutMeBox.style.height;
-        // siteHeight = siteBox.style.height;
-        // scriptHeight = scriptBox.style.height;
-        // contactHeight = contactBox.style.height;
-
-        //animations
+        // subMenu mouse hover (animation)
 
         //gsap scrollPlugin
         gsap.registerPlugin(ScrollTrigger);
@@ -536,6 +526,7 @@
             delay: 0.3,
             opacity: 1
         });
+
         gsap.to(nav, {
             duration: 0.6,
             ease: "sine.out",
@@ -550,6 +541,7 @@
             delay: 1.3,
             opacity: 1
         });
+
         gsap.to(siteTitle, {
             duration: 1.0,
             ease: "sine.out",
@@ -574,25 +566,25 @@
         // subMenu
         gsap.to(aboutMeBox, {
             duration: 1.0,
-            height: "450px",
+            height: "500px",
             delay: 0.5
         });
 
         gsap.to(siteBox, {
             duration: 1.0,
-            height: "600px",
+            height: "635px",
             delay: 0.9
         });
 
         gsap.to(scriptBox, {
             duration: 1.0,
-            height: "750px",
+            height: "790px",
             delay: 1.4
         });
 
         gsap.to(contactBox, {
             duration: 1.0,
-            height: "660px",
+            height: "700px",
             delay: 1.8
         });
 
@@ -637,14 +629,17 @@
                 duration: 0.5,
                 height: "600px"
             });
+
             gsap.to(siteBox, {
                 duration: 0.5,
                 height: "400px"
             });
+
             gsap.to(scriptBox, {
                 duration: 0.5,
                 height: "400px"
             });
+            
             gsap.to(contactBox, {
                 duration: 0.5,
                 height: "400px"
