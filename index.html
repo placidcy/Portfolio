@@ -438,7 +438,7 @@
         const scriptDesc = document.querySelector(".script .desc");
         const contactDesc = document.querySelector(".contact .desc");
 
-        const subMenu_aboutMe = document.querySelector(".aboutMeBox .submenuBox .aboutMe");
+        const subMenu_aboutMe = document.querySelector(".aboutMeBox .aboutMeSubMenu .aboutMe");
 
         const standard_codeView = document.querySelector(".standard_codeView");
         const standardView = document.querySelector(".standardView");
@@ -1020,7 +1020,7 @@
             let topScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
             console.log(topScroll);
 
-            document.querySelector(".scrollValue span").innerText = Math.round(topScroll)
+            document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
         });
     </script>
 </body>
