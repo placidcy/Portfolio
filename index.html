@@ -572,27 +572,27 @@
 
         // subMenu
         gsap.to(aboutMeBox, {
-            duration: 1.0,
+            duration: 0.8,
             height: "500px",
             delay: 0.5
         });
 
         gsap.to(siteBox, {
-            duration: 1.0,
+            duration: 0.8,
             height: "635px",
-            delay: 0.9
+            delay: 0.5
         });
 
         gsap.to(scriptBox, {
-            duration: 1.0,
+            duration: 0.8,
             height: "790px",
-            delay: 1.4
+            delay: 0.5
         });
 
         gsap.to(contactBox, {
-            duration: 1.0,
+            duration: 0.8,
             height: "700px",
-            delay: 1.8
+            delay: 0.5
         });
 
         gsap.to(".mainPage_desc", {
@@ -633,17 +633,17 @@
         //subMenu animation
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "600px"
             });
 
             gsap.to(siteBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "250px"
             });
 
             gsap.to(scriptBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "250px"
             });
             
@@ -654,22 +654,22 @@
 
         aboutMeBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "411px"
             });
 
             gsap.to(siteBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "560px"
             });
 
             gsap.to(scriptBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "345px"
             });
 
             gsap.to(contactBox, {
-                duration: 0.5,
+                duration: 0.3,
                 width: "360px"
             });
         });
