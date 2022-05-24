@@ -63,7 +63,7 @@
             </section>
 
             <section class="aboutMeBox">
-                <acticle class="submenuBox">
+                <acticle class="aboutMeSubMenu">
                     <div class="aboutMe">
                         <span class="aboutBoxTitle">ABOUT</span>
                     </div>
@@ -670,6 +670,7 @@
             });
         });
 
+        // 각각 구역에 대한 애니메이션
         function runSectionAnimation() {
             // introduce
             // submenu
@@ -1010,13 +1011,13 @@
                 });
             }
 
-            requestAnimationFrame(runSectionAnimation);
+            window.requestAnimationFrame(runSectionAnimation);
         }
 
         runSectionAnimation();
 
         window.addEventListener("scroll", () => {
-            let topScroll = window.scrollX || window.pageYOffset || document.documentElement.scrollTop;
+            let topScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
             console.log(topScroll);
 
             document.querySelector(".scrollValue span").innerText = Math.round(topScroll)
