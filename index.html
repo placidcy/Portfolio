@@ -527,7 +527,7 @@
 
         // mainTitle, nav, submenu opacity animation
         gsap.to(mainTitle, {
-            duration: 0.4,
+            duration: 0.8,
             ease: "sine.out",
             x: 0,
             delay: 0.3,
@@ -535,7 +535,7 @@
         });
 
         gsap.to(nav, {
-            duration: 0.6,
+            duration: 0.8,
             ease: "sine.out",
             y: 0,
             delay: 0.3,
@@ -596,9 +596,9 @@
         });
 
         gsap.to(".mainPage_desc", {
-            duration: 0.5,
+            duration: 0.8,
             opacity: 1,
-            delay: 0.4,
+            delay: 0.8,
             x: 0
         });
 
@@ -634,44 +634,43 @@
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.5,
-                height: "600px"
+                width: "600px"
             });
 
             gsap.to(siteBox, {
                 duration: 0.5,
-                height: "400px"
+                width: "250px"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.5,
-                height: "400px"
+                width: "250px"
             });
             
-            gsap.to(contactBox, {
-                duration: 0.5,
-                height: "400px"
-            });
+            // gsap.to(contactBox, {
+            //     duration: 0.5,
+            // });
         });
 
         aboutMeBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.5,
-                height: "450px"
+                width: "411px"
             });
 
             gsap.to(siteBox, {
                 duration: 0.5,
-                height: "600px"
+                width: "560px"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.5,
-                height: "750px"
+                width: "345px"
             });
 
             gsap.to(contactBox, {
                 duration: 0.5,
-                height: "660px"
+                width: "360px"
             });
         });
 

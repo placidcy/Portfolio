@@ -165,11 +165,16 @@ html.has-scroll-dragging {
     margin-right: 0;
     color: black;
     cursor: pointer;
+
+    transition:
+        width 0.5s cubic-bezier(0, 1.45, 0.62, 1.3),
+        height 0.8s cubic-bezier(0, 0.73, 0.14, 1.2),
+        border-radius 0.3s cubic-bezier(0, 1.45, 0.62, 1.3);
 }
 
 .subMenu .aboutMe {
     width: 411px;
-    /* height: 500px; */
+    height: 500px;
     height: 0;
     background-color: #F0A398;
     position: relative;
@@ -195,7 +200,7 @@ html.has-scroll-dragging {
 
 .subMenu .site {
     width: 560px;
-    /* height: 635px; */
+    height: 635px;
     height: 0;
     background-color: #BA85CC;
     position: relative;
@@ -223,7 +228,7 @@ html.has-scroll-dragging {
 
 .subMenu .script {
     width: 345px;
-    /* height: 790px; */
+    height: 790px;
     height: 0;
     background-color: #85B2CC;
     position: relative;
@@ -249,7 +254,7 @@ html.has-scroll-dragging {
 
 .subMenu .contact {
     width: 360px;
-    /* height: 700px; */
+    height: 700px;
     height: 0;
     background-color: #FFD395;
     position: relative;
