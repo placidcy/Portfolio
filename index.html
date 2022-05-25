@@ -1014,13 +1014,12 @@
             window.requestAnimationFrame(runSectionAnimation);
         }
 
-        runSectionAnimation();
-
         window.addEventListener("scroll", () => {
             let topScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
             console.log(topScroll);
 
             document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
+            runSectionAnimation();
         });
     </script>
 </body>
