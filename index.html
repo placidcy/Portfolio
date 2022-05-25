@@ -402,7 +402,7 @@
         </div>
     </main>
 
-    <div class="scrollValue">pageOffset: <span class="number"></span></div>
+    <div class="scrollValue">pageYOffset: <span class="number"></span></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
@@ -459,30 +459,30 @@
 
 
         // 가로 스크롤
-        // function scroll() {
-        //     const sectionBoxWidth = sectionBox.offsetWidth;
+        function scroll() {
+            const sectionBoxWidth = sectionBox.offsetWidth;
 
-        //     document.body.style.height = sectionBoxWidth + "px";
-        //     let topScroll = window.pageYOffset || window.pageYOffset || document.documentElement.scrollTop;
-        //     let totalSectionWidth = sectionBoxWidth - window.innerWidth;
-        //     let totalSectionHeight = sectionBoxWidth - window.innerHeight;
+            document.body.style.height = sectionBoxWidth + "px";
+            let topScroll = window.pageYOffset || window.pageYOffset || document.documentElement.scrollTop;
+            let totalSectionWidth = sectionBoxWidth - window.innerWidth;
+            let totalSectionHeight = sectionBoxWidth - window.innerHeight;
 
-        //     let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
+            let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
 
-        //     document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
+            document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
 
-        //     gsap.to(sectionBox, {
-        //         left: -toLeftValue
-        //     });
+            gsap.to(sectionBox, {
+                left: -toLeftValue
+            });
 
-        //     requestAnimationFrame(scroll);
-        // }
-
+            requestAnimationFrame(scroll);
+        }
         
-        // scroll();
+        scroll();
         
-        // window.addEventListener("resize", scroll);
+        window.addEventListener("resize", scroll);
 
+        // locomotive 스크롤 행렬 값 불러오기
         let mainTagStyle = window.getComputedStyle(mainTagElement, null);
         let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
 
@@ -632,6 +632,7 @@
             x: 0
         });
 
+        
         //subMenu 마우스 이벤트
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
@@ -676,33 +677,35 @@
             });
         });
 
-        // 각각 구역에 대한 애니메이션
+        // 각 구역에 대한 애니메이션
         function runSectionAnimation() {
-            let mainTagStyle = window.getComputedStyle(mainTagElement, null);
-            let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
+            // 행렬 m41 값 기준 애니메이션 테스트
+            // let mainTagStyle = window.getComputedStyle(mainTagElement, null);
+            // let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
 
-            document.body.style.width = mainTagElement.offsetWidth;
+            // document.body.style.width = mainTagElement.offsetWidth;
 
-            if(mainTagMatrix.m41 >= -800 && mainTagMatrix.m41 <= -2600) {
-                gsap.to(subMenu_aboutMe, {
-                    duration: 0.6,
-                    height: "440px"
-                });
-            }
-            // introduce
-            // // submenu
-            // if (window.pageYOffset >= 800 && window.pageYOffset <= 2600) {
+            // if(mainTagMatrix.m41 >= -800 && mainTagMatrix.m41 <= -2600) {
             //     gsap.to(subMenu_aboutMe, {
             //         duration: 0.6,
             //         height: "440px"
             //     });
-
-            // } else if (window.pageYOffset < 450 || window.pageYOffset > 2600) {
-            //     gsap.to(subMenu_aboutMe, {
-            //         duration: 0.6,
-            //         height: "0"
-            //     });
             // }
+            
+            // introduce
+            // // submenu
+            if (window.pageYOffset >= 800 && window.pageYOffset <= 2600) {
+                gsap.to(subMenu_aboutMe, {
+                    duration: 0.6,
+                    height: "440px"
+                });
+
+            } else if (window.pageYOffset < 450 || window.pageYOffset > 2600) {
+                gsap.to(subMenu_aboutMe, {
+                    duration: 0.6,
+                    height: "0"
+                });
+            }
 
             if (window.pageYOffset >= 1300) {
                 gsap.to(".firstPic", {
@@ -1028,12 +1031,19 @@
                 });
             }
 
-            document.querySelector(".scrollValue .number").innerText = mainTagMatrix.m41;
-
+            document.querySelector(".scrollValue .number").innerText = Math.round(window.pageYOffset);
             requestAnimationFrame(runSectionAnimation);
         }
 
+        runSectionAnimation();
+
         window.addEventListener("resize", runSectionAnimation);
+
+        
+        // window.addEventListener("scroll", () => {
+        //     document.querySelector(".scrollValue .number").innerText = Math.round(window.pageYOffset);
+        //     runSectionAnimation();
+        // });
 
         // window.addEventListener("scroll", () => {
         //     // let topScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
