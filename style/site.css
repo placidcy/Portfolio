@@ -357,9 +357,8 @@ html.has-scroll-dragging {
     color: white;
     line-height: 1.5;
     margin-top: 40px;
-    padding: 0 50px;
     opacity: 0;
-    transform: translateX(-130px);
+    transform: translateX(-100px);
 }
 
 .firstIntro p {
@@ -368,8 +367,7 @@ html.has-scroll-dragging {
     color: white;
     line-height: 1.5;
     margin-top: 100px;
-    padding: 0 50px;
-    transform: translateY(-130px);
+    /* transform: translateY(-100px); */
     opacity: 0;
 }
 

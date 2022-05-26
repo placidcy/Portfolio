@@ -85,7 +85,8 @@
                             <h2>프로그래밍 언어에 관심을 가지다</h2>
                             <p>컴퓨터 개발 언어에 관심을 가지게 된 계기는<br>
                                 처음으로 그래픽 카드와 CPU 부품을 직접 구입하여 장착했을때부터 시작되었습니다<br>
-                                단순히 부품을 교체하는 일이였고 컴퓨터에 대해 전혀 몰랐었지만 직접 웹사이트에서 검색하면서 영상을 찾아보고 따라 하면서 조립을 하였고 제대로 동작했을때 흥미를
+                                단순히 부품을 교체하는 일이였고 컴퓨터에 대해 전혀 몰랐었지만 직접 웹사이트에서 <br>
+                                검색하면서 영상을 찾아보고 따라 하면서 조립을 하였고 제대로 동작했을때 흥미를
                                 느꼈습니다<br>
                                 <br>
                                 조립을 하면서 CPU, 메모리 등 부품들의 역할에 대해 궁금증이 생겨 검색으로 찾아보면서 프로그램과의 관계에 대해서 생각했고 프로그램이 어떻게 동작하는지,
@@ -102,8 +103,8 @@
                                 코드를 보면서 이 문제에 대한 언어의 문법을 사용한 이유에 대해서 찾아보게 되었고
                                 그 과정에서 프로그래밍에 대해 더 자세히 알게 된 계기가 되었습니다
                             </p>
+                            <img src="./img/Frame 3.jpg" width="400px" height="545px" style="opacity: 0" alt="secondPic">
                         </div>
-                        <img src="./img/Frame 3.jpg" width="400px" height="545px" style="opacity: 0" alt="secondPic">
                     </div>
                     <div class="secondIntro">
                         <div class="textBox">
@@ -402,7 +403,7 @@
         </div>
     </main>
 
-    <div class="scrollValue">pageYOffset: <span class="number"></span></div>
+    <div class="scrollValue">Matrix3dScrollX :  <span class="number"></span></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
@@ -457,34 +458,29 @@
 
         const mainTagElement = document.querySelector("[data-scroll-container]");
 
-
         // 가로 스크롤
-        function scroll() {
-            const sectionBoxWidth = sectionBox.offsetWidth;
+        // function scroll() {
+        //     const sectionBoxWidth = sectionBox.offsetWidth;
 
-            document.body.style.height = sectionBoxWidth + "px";
-            let topScroll = window.pageYOffset || window.pageYOffset || document.documentElement.scrollTop;
-            let totalSectionWidth = sectionBoxWidth - window.innerWidth;
-            let totalSectionHeight = sectionBoxWidth - window.innerHeight;
+        //     document.body.style.height = sectionBoxWidth + "px";
+        //     let topScroll = window.pageYOffset || window.pageYOffset || document.documentElement.scrollTop;
+        //     let totalSectionWidth = sectionBoxWidth - window.innerWidth;
+        //     let totalSectionHeight = sectionBoxWidth - window.innerHeight;
 
-            let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
+        //     let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
 
-            document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
+        //     document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
 
-            gsap.to(sectionBox, {
-                left: -toLeftValue
-            });
+        //     gsap.to(sectionBox, {
+        //         left: -toLeftValue
+        //     });
 
-            requestAnimationFrame(scroll);
-        }
+        //     requestAnimationFrame(scroll);
+        // }
         
-        scroll();
+        // scroll();
         
-        window.addEventListener("resize", scroll);
-
-        // locomotive 스크롤 행렬 값 불러오기
-        let mainTagStyle = window.getComputedStyle(mainTagElement, null);
-        let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
+        // window.addEventListener("resize", scroll);
 
         //codeview, sitelink
         standard_codeView.addEventListener("click", () => {
@@ -677,37 +673,31 @@
             });
         });
 
+        const scrollXvalue = document.querySelector(".scrollValue .number");
+
         // 각 구역에 대한 애니메이션
         function runSectionAnimation() {
-            // 행렬 m41 값 기준 애니메이션 테스트
-            // let mainTagStyle = window.getComputedStyle(mainTagElement, null);
-            // let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
-
-            // document.body.style.width = mainTagElement.offsetWidth;
-
-            // if(mainTagMatrix.m41 >= -800 && mainTagMatrix.m41 <= -2600) {
-            //     gsap.to(subMenu_aboutMe, {
-            //         duration: 0.6,
-            //         height: "440px"
-            //     });
-            // }
+            // 행렬 m41(x축) 값 기준 애니메이션
+            // 행렬 값 가져오기
+            let mainTagStyle = window.getComputedStyle(mainTagElement, null);
+            let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
             
             // introduce
-            // // submenu
-            if (window.pageYOffset >= 800 && window.pageYOffset <= 2600) {
+            // submenu
+            if (mainTagMatrix.m41 <= -800 && mainTagMatrix.m41 >= -2600) {
                 gsap.to(subMenu_aboutMe, {
                     duration: 0.6,
                     height: "440px"
                 });
 
-            } else if (window.pageYOffset < 450 || window.pageYOffset > 2600) {
+            } else if (mainTagMatrix.m41 > -450 || mainTagMatrix.m41 < -2600) {
                 gsap.to(subMenu_aboutMe, {
                     duration: 0.6,
                     height: "0"
                 });
             }
 
-            if (window.pageYOffset >= 1300) {
+            if (mainTagMatrix.m41 <= -1300) {
                 gsap.to(".firstPic", {
                     duration: 0.6,
                     height: "810px"
@@ -720,7 +710,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 2000) {
+            if (mainTagMatrix.m41 <= -2000) {
                 gsap.to(".firstIntro h2", {
                     duration: 0.6,
                     x: 0,
@@ -740,7 +730,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 2400) {
+            if (mainTagMatrix.m41 <= -2400) {
                 gsap.to(".secondPic", {
                     duration: 0.6,
                     height: "810px"
@@ -760,7 +750,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 2900) {
+            if (mainTagMatrix.m41 <= -2900) {
                 gsap.to(".secondIntro", {
                     duration: 0.6,
                     height: "735px"
@@ -781,7 +771,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 4000 && window.pageYOffset < 6250) {
+            if (mainTagMatrix.m41 <= -4000 && mainTagMatrix.m41 > -6250) {
                 gsap.to(".siteWork .site", {
                     duration: 0.6,
                     height: "500px"
@@ -792,7 +782,7 @@
                     opacity: 1,
                     delay: 0.5
                 });
-            } else if (window.pageYOffset < 3900 || window.pageYOffset > 6250) {
+            } else if (mainTagMatrix.m41 > -3900 || mainTagMatrix.m41 < -6250) {
                 gsap.to(".siteWork .site", {
                     duration: 0.6,
                     height: "50px"
@@ -804,7 +794,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 4900) {
+            if (mainTagMatrix.m41 <= -4900) {
                 gsap.to(".siteWorkSection", {
                     duration: 0.6,
                     height: "860px"
@@ -822,7 +812,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 5350) {
+            if (mainTagMatrix.m41 <= -5350) {
                 gsap.to(".webStandard .standard_codeView", {
                     duration: 0.6,
                     delay: 1.0,
@@ -841,7 +831,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 6100) {
+            if (mainTagMatrix.m41 <= -6100) {
                 gsap.to(".webStandard .standardView", {
                     duration: 0.6,
                     opacity: 1
@@ -853,7 +843,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 6700) {
+            if (mainTagMatrix.m41 <= -6700) {
                 gsap.to(".mainSite h2", {
                     duration: 0.6,
                     delay: 0.5,
@@ -866,7 +856,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 8100) {
+            if (mainTagMatrix.m41 <= -8100) {
                 gsap.to(".mainSite .mainSite_codeView", {
                     duration: 0.6,
                     width: "205px"
@@ -894,7 +884,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 8700) {
+            if (mainTagMatrix.m41 <= -8700) {
                 gsap.to(".php h2", {
                     duration: 0.6,
                     x: 0,
@@ -918,14 +908,14 @@
                 });
             }
 
-            if (window.pageYOffset >= 9050) {
+            if (mainTagMatrix.m41 <= -9050) {
                 gsap.to(".php .php_image", {
                     duration: 0.6,
                     height: "615px"
                 });
             }
 
-            if (window.pageYOffset >= 10300) {
+            if (mainTagMatrix.m41 <= -10300) {
                 gsap.to(".php .phpView", {
                     duration: 0.6,
                     opacity: 1
@@ -937,7 +927,7 @@
             }
 
             // react
-            if (window.pageYOffset >= 10800) {
+            if (mainTagMatrix.m41 <= -10800) {
                 gsap.to(".react h2", {
                     duration: 0.6,
                     x: 0,
@@ -950,7 +940,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 11700) {
+            if (mainTagMatrix.m41 <= -11700) {
                 gsap.to(".react .reactView", {
                     duration: 0.6,
                     opacity: 1
@@ -962,7 +952,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 12000) {
+            if (mainTagMatrix.m41 <= -12000) {
                 gsap.to(".react .react_codeView", {
                     duration: 0.6,
                     width: "205px"
@@ -981,7 +971,7 @@
             }
 
             // game
-            if (window.pageYOffset >= 12500) {
+            if (mainTagMatrix.m41 <= -12500) {
                 gsap.to(".game h2", {
                     duration: 0.6,
                     x: 0,
@@ -1004,7 +994,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 13500) {
+            if (mainTagMatrix.m41 <= -13500) {
                 gsap.to(".game .imgBoxText", {
                     duration: 0.6,
                     x: 0,
@@ -1018,7 +1008,7 @@
                 });
             }
 
-            if (window.pageYOffset >= 14000) {
+            if (mainTagMatrix.m41 <= -14000) {
                 gsap.to(".game .imgBoxText", {
                     duration: 0.6,
                     opacity: 1
@@ -1030,19 +1020,14 @@
                     opacity: 1
                 });
             }
-
-            document.querySelector(".scrollValue .number").innerText = Math.round(window.pageYOffset);
             requestAnimationFrame(runSectionAnimation);
+            scrollXvalue.innerText = mainTagMatrix.m41;
         }
 
         runSectionAnimation();
 
-        window.addEventListener("resize", runSectionAnimation);
-
-        
-        // window.addEventListener("scroll", () => {
-        //     document.querySelector(".scrollValue .number").innerText = Math.round(window.pageYOffset);
-        //     runSectionAnimation();
+        // window.addEventListener("scroll", function() {
+           
         // });
 
         // window.addEventListener("scroll", () => {
