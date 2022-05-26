@@ -165,10 +165,14 @@ html.has-scroll-dragging {
 
 .subMenu .aboutMe {
     width: 411px;
-    height: 500px;
+    /* height: 500px; */
     height: 50px;
     background-color: #F0A398;
     position: relative;
+}
+
+.subMenu .aboutMe:hover {
+    border-radius: 500px 500px 0 0;
 }
 
 .subMenu .aboutMe .desc {
@@ -182,12 +186,13 @@ html.has-scroll-dragging {
 .subMenu .aboutMe .subTitle {
     font-size: 400px;
     font-family: 'Raleway Dots';
-    margin-left: 5vw;
+    display: block;
     /* position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); */
     opacity: 0;
+    text-align: center;
 }
 
 .subMenu .site {
@@ -195,7 +200,10 @@ html.has-scroll-dragging {
     height: 0;
     background-color: #BA85CC;
     position: relative;
-    text-overflow: clip;
+}
+
+.subMenu .site:hover {
+    border-radius: 500px 500px 0 0;
 }
 
 .subMenu .site .desc {
@@ -209,11 +217,8 @@ html.has-scroll-dragging {
 .subMenu .site .subTitle {
     font-size: 400px;
     font-family: 'Porter Sans Block';
-    transform: translate(0, 0);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
     opacity: 0;
 }
 
@@ -225,13 +230,15 @@ html.has-scroll-dragging {
     position: relative;
 }
 
+.subMenu .script:hover {
+    border-radius: 500px 500px 0 0;
+}
+
 .subMenu .script .subTitle {
     font-size: 400px;
     font-family: 'Italiana';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
     opacity: 0;
 }
 
@@ -250,13 +257,16 @@ html.has-scroll-dragging {
     position: relative;
 }
 
+.subMenu .contact:hover {
+    border-radius: 500px 500px 0 0;
+}
+
+
 .subMenu .contact .subTitle {
     font-size: 400px;
     font-family: 'PhosphateInline';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
     opacity: 0;
 }
 

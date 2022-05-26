@@ -403,7 +403,7 @@
         </div>
     </main>
 
-    <div class="scrollValue">Matrix3dScrollX :  <span class="number"></span></div>
+    <div class="scrollValue">Matrix3d_X :  <span class="number"></span></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
@@ -457,6 +457,7 @@
         const game_codeView = document.querySelector(".game_codeView");
 
         const mainTagElement = document.querySelector("[data-scroll-container]");
+        const scrollXvalue = document.querySelector(".scrollValue .number");
 
         // 가로 스크롤
         // function scroll() {
@@ -596,7 +597,7 @@
         gsap.to(".mainPage_desc", {
             duration: 0.8,
             opacity: 1,
-            delay: 0.8,
+            delay: 0.3,
             x: 0
         });
 
@@ -630,50 +631,157 @@
 
         
         //subMenu 마우스 이벤트
+
+        //aboutme
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
-                duration: 0.3,
-                width: "600px"
+                duration: 0.1,
+                width: "650px",
             });
 
             gsap.to(siteBox, {
-                duration: 0.3,
-                width: "250px"
+                duration: 0.1,
+                width: "300px",
             });
-
-            gsap.to(scriptBox, {
-                duration: 0.3,
-                width: "250px"
-            });
-
-            // gsap.to(contactBox, {
-            //     duration: 0.5,
-            // });
         });
 
         aboutMeBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
-                duration: 0.3,
-                width: "411px"
+                duration: 0.1,
+                width: "411px",
             });
 
             gsap.to(siteBox, {
-                duration: 0.3,
+                duration: 0.1,
                 width: "560px"
             });
 
             gsap.to(scriptBox, {
-                duration: 0.3,
+                duration: 0.1,
                 width: "345px"
             });
 
             gsap.to(contactBox, {
-                duration: 0.3,
+                duration: 0.1,
                 width: "360px"
             });
         });
 
-        const scrollXvalue = document.querySelector(".scrollValue .number");
+        //sitebox
+        siteBox.addEventListener("mouseover", () => {
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "650px",
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "300px"
+            });
+        });
+
+        siteBox.addEventListener("mouseout", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.1,
+                width: "411px",
+            });
+
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "560px"
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "345px"
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "360px"
+            });
+        });
+
+        //script
+        scriptBox.addEventListener("mouseover", () => {
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "650px",
+            });
+
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "300px",
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "300px",
+            });
+        });
+
+        scriptBox.addEventListener("mouseout", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.1,
+                width: "411px",
+            });
+
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "560px"
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "345px"
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "360px"
+            });
+        });
+
+        //contact
+        contactBox.addEventListener("mouseover", () => {
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "650px",
+            });
+
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "300px",
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "300px",
+            });
+        });
+
+        
+        contactBox.addEventListener("mouseout", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.1,
+                width: "411px",
+            });
+
+            gsap.to(siteBox, {
+                duration: 0.1,
+                width: "560px"
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "345px"
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "360px"
+            });
+        });
 
         // 각 구역에 대한 애니메이션
         function runSectionAnimation() {
@@ -1026,18 +1134,6 @@
         }
 
         runSectionAnimation();
-
-        // window.addEventListener("scroll", function() {
-           
-        // });
-
-        // window.addEventListener("scroll", () => {
-        //     // let topScroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-        //     let scrollX = mainTagMatrix.m41;
-
-        //     document.querySelector(".scrollValue span").innerText = Math.round(scrollX);
-        //     runSectionAnimation();
-        // });
     </script>
 </body>
 
