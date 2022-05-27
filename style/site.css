@@ -116,7 +116,6 @@ html.has-scroll-dragging {
     transform: translateX(-50px);
 }
 
-
 /* header */
 .header {
     position: relative;
@@ -880,7 +879,6 @@ html.has-scroll-dragging {
 .scriptSection {
     position: relative;
     width: 7000px;
-    height: 100vh;
     margin-left: 200px;
     display: flex;
 }
@@ -922,19 +920,13 @@ html.has-scroll-dragging {
 }
 
 .scriptSection .scriptTitle {
-    font-size: 300px;
+    font-size: 350px;
     font-family: "Italiana";
     text-align: left;
-    position: absolute;
-    bottom: 0;
-    left: 1250px;
+    padding-top: 150px;
+    margin-left: 200px;
 }
 
-.scriptSection .scriptMain {
-    position: absolute;
-    left: 2200px;
-    bottom: 0;
-}
 
 .scriptSection .scriptContents {
     background-color: #ffddd4;
@@ -1037,8 +1029,8 @@ html.has-scroll-dragging {
 /* parrallax */
 .parallaxEffect {
     margin: -7vh 7vw 20vh 0;
-    position: relative;
     width: 1230px;
+
 }
 
 .parallaxEffect iframe {}
@@ -1174,7 +1166,6 @@ html.has-scroll-dragging {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-
 }
 
 .emailSection .email_title {
