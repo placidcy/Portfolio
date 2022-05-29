@@ -344,7 +344,7 @@ html.has-scroll-dragging {
 
 
 .aboutMeSubMenu .aboutMe {
-    width: 445px;
+    width: 411px;
     height: 50px;
     background-color: #F0A398;
 }
@@ -982,7 +982,7 @@ html.has-scroll-dragging {
 
 .scriptSection .scriptSubMenu .script {
     width: 411px;
-    height: 500px;
+    height: 400px;
     background-color: #85B2CC;
 }
 
@@ -1176,7 +1176,7 @@ html.has-scroll-dragging {
 
 .contactSection .contactSubMenu .contact {
     width: 411px;
-    height: 500px;
+    height: 400px;
     background-color: #FFD395;
 }
 
