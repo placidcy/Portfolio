@@ -30,11 +30,11 @@
                     <p class="mainPage_desc">지금까지 배운 웹 개발 내용을 기반으로 만든<br>포트폴리오 사이트입니다</p>
                     <nav class="menu">
                         <ul>
-                            <li><a href="home">HOME</a></li>
-                            <li><a href="about">ABOUT ME</a></li>
-                            <li><a href="script">SCRIPT</a></li>
-                            <li><a href="site">SITE</a></li>
-                            <li><a href="contact">CONTACT</a></li>
+                            <li class="home"><a href="#">HOME</a></li>
+                            <li class="aboutMe"><a href="#">ABOUT ME</a></li>
+                            <li class="script"><a href="#">SCRIPT</a></li>
+                            <li class="site"><a href="#">SITE</a></li>
+                            <li class="contact"><a href="#">CONTACT</a></li>
                         </ul>
                     </nav>
                 </header>
@@ -212,8 +212,7 @@
                             각각 영역을 구성하는 태그들을 컴포넌트로 만들어 나누었습니다<br>
                             JSON 파일을 이용해 데이터를 불러오도록 처리하였고
                             유튜브 API와 themoviedb API 기능을 사용해서 검색어에 해당하는 동영상과 영화 목록들을 불러올 수 있고 이미지를 클릭하면 해당 동영상이나 영화 페이지로
-                            이동할
-                            수 있습니다
+                            이동할 수 있습니다
 
                             <div class="react_codeView"><a href="#">코드 보기</a></div>
                         </span>
@@ -226,8 +225,9 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <h2>REACT</h2>
                         </div>
-                        <h2>REACT</h2>
                     </div>
 
                     <div class="game">
@@ -264,6 +264,7 @@
 
                     <div class="script">
                         <span class="scriptText">SCRIPT</span>
+                        <span class="scriptDesc">자바스크립트로 구현한 효과입니다</span>
                     </div>
 
                     <div class="contact"></div>
@@ -282,7 +283,7 @@
                         <div class="effectBox">
                             <div class="mouseEffect">
                                 <iframe src="https://placidcy.github.io/webs_class/javascript/effect/mouseEffect01.html"
-                                    width="1230" height="615"></iframe>
+                                    width="1230" height="0"></iframe>
                                 <span class="mouse_subtitle">SCRIPT 1</span>
                                 <h3 class="mouse_title">MOUSE EFFECT</h3>
                                 <span class="mouse_desc">마우스 움직임에 대한 시각적인효과를 구현했습니다<br>
@@ -295,7 +296,7 @@
                             <div class="sliderEffect">
                                 <iframe
                                     src="https://placidcy.github.io/webs_class/javascript/effect/sliderEffect01.html"
-                                    width="1230" height="615"></iframe>
+                                    width="1230" height="0"></iframe>
                                 <span class="slider_subtitle">SCRIPT 2</span>
                                 <h3 class="slider_title">SLIDER EFFECT</h3>
                                 <span class="slider_desc">웹페이지에서 화면을 스크롤 했을때 이미지와<br>
@@ -307,7 +308,7 @@
                             <div class="parallaxEffect">
                                 <iframe
                                     src="https://placidcy.github.io/webs_class/javascript/effect/parallaxEffect01.html"
-                                    width="1230" height="615"></iframe>
+                                    width="1230" height="0"></iframe>
                                 <span class="parallax_subtitle">SCRIPT 3</span>
                                 <h3 class="parallax_title">PARRALAX EFFECT</h3>
                                 <span class="parallax_desc">여러 개의 이미지들을 가로 방향 또는 세로 방향으로<br>
@@ -353,7 +354,6 @@
 
                     <div class="contact_sideImage"></div>
 
-
                     <div class="emailSection">
                         <h2 class="email_title">CONTACT</h2>
 
@@ -388,7 +388,7 @@
                         <div class="line"></div>
                         <div class="react">
                             <a href="#">
-                                <img src="./icons/LinkImage1.jpg" alt="react 이미지" width="25" height="25">
+                                <img src="./icons/LinkImage1.jpg" alt="react 이미지" width="25" height="0">
                                 <span class="linkText">REACT</span>
                             </a>
                         </div>
@@ -396,7 +396,7 @@
                         <div class="line"></div>
                         <div class="vue">
                             <a href="#">
-                                <img src="./icons/LinkImage1.jpg" alt="react 이미지">
+                                <img src="./icons/LinkImage1.jpg" alt="react 이미지" width="25" height="0">
                                 <span class="linkText">VUE</span>
                             </a>
                         </div>
@@ -404,7 +404,7 @@
                         <div class="line"></div>
                         <div class="github">
                             <a href="#">
-                                <img src="./icons/LinkImage2.jpg" alt="react 이미지">
+                                <img src="./icons/LinkImage2.jpg" alt="react 이미지" width="25" height="0">
                                 <span class="linkText">GITHUB</span>
                             </a>
                         </div>
@@ -439,6 +439,11 @@
         const contactBox = document.querySelector(".subMenu .contact");
 
         const nav = document.querySelector(".header .menu");
+        const nav_Home = document.querySelector(".header .menu .home");
+        const nav_aboutMe = document.querySelector(".header .menu .aboutMe a");
+        const nav_script = document.querySelector(".header .menu .script a");
+        const nav_site = document.querySelector(".header .menu .site a");
+        const nav_contact = document.querySelector(".header .menu .contact a");
 
         const aboutMeTitle = document.querySelector(".aboutMe .subTitle");
         const siteTitle = document.querySelector(".site .subTitle");
@@ -469,6 +474,10 @@
 
         const mainTagElement = document.querySelector("[data-scroll-container]");
         const scrollXvalue = document.querySelector(".scrollValue .number");
+
+        // matrix3d m41(x축) 값 기준 애니메이션
+        // [data-scroll-container] 요소 가져오기
+        let mainTagStyle = window.getComputedStyle(mainTagElement, null);
 
         // 가로 스크롤
         // function scroll() {
@@ -535,6 +544,11 @@
             window.open("https://github.com/placidcy/php/tree/master");
         });
 
+        nav_aboutMe.addEventListener("click", () => {
+            let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
+            mainTagMatrix.m41 = -2400;
+        });
+
         // mainTitle / nav / submenu 애니메이션
         gsap.to(mainTitle, {
             duration: 0.8,
@@ -553,56 +567,56 @@
         });
 
         gsap.to(aboutMeTitle, {
-            duration: 1.0,
-            ease: "sine.out",
-            delay: 2.1,
-            opacity: 1
-        });
-
-        gsap.to(siteTitle, {
-            duration: 1.0,
+            duration: 0.6,
             ease: "sine.out",
             delay: 2.3,
             opacity: 1
         });
 
-        gsap.to(scriptTitle, {
-            duration: 1.0,
+        gsap.to(siteTitle, {
+            duration: 0.6,
             ease: "sine.out",
             delay: 2.5,
             opacity: 1
         });
 
-        gsap.to(contactTitle, {
-            duration: 1.0,
+        gsap.to(scriptTitle, {
+            duration: 0.6,
             ease: "sine.out",
             delay: 2.7,
+            opacity: 1
+        });
+
+        gsap.to(contactTitle, {
+            duration: 0.6,
+            ease: "sine.out",
+            delay: 2.9,
             opacity: 1
         });
 
         // subMenu
         gsap.to(aboutMeBox, {
             duration: 0.8,
-            height: "500px",
-            delay: 1.3
+            height: "450px",
+            delay: 1.7
         });
 
         gsap.to(siteBox, {
             duration: 0.8,
-            height: "635px",
-            delay: 1.5
+            height: "585px",
+            delay: 1.9
         });
 
         gsap.to(scriptBox, {
             duration: 0.8,
-            height: "790px",
-            delay: 1.7
+            height: "740px",
+            delay: 2.1
         });
 
         gsap.to(contactBox, {
             duration: 0.8,
-            height: "700px",
-            delay: 1.9
+            height: "650px",
+            delay: 2.3
         });
 
         gsap.to(".mainPage_desc", {
@@ -796,17 +810,22 @@
 
         // 각 구역에 대한 애니메이션
         function runSectionAnimation() {
-            // matrix3d m41(x축) 값 기준 애니메이션
-            // matrix3d 값 가져오기
-            let mainTagStyle = window.getComputedStyle(mainTagElement, null);
+            // 행렬값 가져오기
             let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
-            
+
             // introduce
             // submenu
             if (mainTagMatrix.m41 <= -800 && mainTagMatrix.m41 >= -2600) {
                 gsap.to(subMenu_aboutMe, {
                     duration: 0.6,
                     height: "425px"
+                });
+
+                gsap.to(".aboutBoxDesc", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay : 0.5
                 });
 
             } else if (mainTagMatrix.m41 > -450 || mainTagMatrix.m41 < -2600) {
@@ -917,9 +936,9 @@
 
                 gsap.to(".siteWork .siteWorkSubMenu .siteDesc", {
                     duration: 0.6,
-                    y: 0,
+                    x: 0,
                     opacity: 1,
-                    delay: 0.5
+                    delay: 0.7
                 });
             } else if (mainTagMatrix.m41 > -3900 || mainTagMatrix.m41 < -6250) {
                 gsap.to(".siteWork .site", {
@@ -933,6 +952,7 @@
                 });
             }
 
+            //sitework
             if (mainTagMatrix.m41 <= -4900) {
                 gsap.to(".siteWorkSection", {
                     duration: 0.6,
@@ -952,6 +972,7 @@
                 });
             }
 
+            //webstandard
             if (mainTagMatrix.m41 <= -5350) {
                 gsap.to(".webStandard .standard_codeView", {
                     duration: 0.6,
@@ -967,18 +988,19 @@
                 gsap.to(".webStandard .standard_image", {
                     duration: 0.6,
                     delay: 0.4,
-                    height: "615px"
+                    height: "619px"
                 });
             }
 
             if (mainTagMatrix.m41 <= -6100) {
                 gsap.to(".webStandard .standardView", {
                     duration: 0.6,
-                    opacity: 1
+                    opacity: 1,
+                    delay: 0.6
                 });
                 gsap.to(".webStandard .standardView .imgBoxText", {
                     duration: 0.6,
-                    delay: 0.4,
+                    delay: 0.6,
                     opacity: 1
                 });
             }
@@ -1024,6 +1046,8 @@
                 });
             }
 
+            // php
+
             if (mainTagMatrix.m41 <= -8700) {
                 gsap.to(".php h2", {
                     duration: 0.6,
@@ -1051,7 +1075,7 @@
             if (mainTagMatrix.m41 <= -9050) {
                 gsap.to(".php .php_image", {
                     duration: 0.6,
-                    height: "615px"
+                    height: "619px"
                 });
             }
 
@@ -1130,7 +1154,7 @@
                 });
                 gsap.to(".game .game_image", {
                     duration: 0.6,
-                    height: "615px"
+                    height: "619px"
                 });
             }
 
@@ -1160,6 +1184,302 @@
                     opacity: 1
                 });
             }
+
+            //script
+            //submenu
+            if(mainTagMatrix.m41 <= -14750 && mainTagMatrix.m41 >= -16900) {
+                gsap.to(".scriptSection .scriptSubMenu .script", {
+                    duration: 0.6,
+                    height: "400px"
+                });
+            } else if(mainTagMatrix.m41 < -16900) {
+                gsap.to(".scriptSection .scriptSubMenu .script", {
+                    duration: 0.6,
+                    height: "50px"
+                });
+            }
+
+            //title
+            if(mainTagMatrix.m41 <= -16000) {
+                gsap.to(".scriptSection .scriptTitle", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0
+                });
+
+                gsap.to(".scriptSection .scriptDesc", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0
+                });
+            }
+
+            //contents
+            //subText
+            if(mainTagMatrix.m41 <= -16800) {
+                gsap.to(".scriptContents .subText", {
+                    duration: 0.6,
+                    opacity: 1,
+                    y: 0
+                })
+            }
+
+            //contents section
+            if(mainTagMatrix.m41 <= -16900) {
+                gsap.to(".scriptSection .scriptContents", {
+                    duration: 0.6,
+                    opacity: 1,
+                    y: 0,
+                    height: "85vh"
+                })
+            }
+
+            //mouse effect
+            if(mainTagMatrix.m41 <= -17200) {
+                gsap.to(".mouseEffect .mouse_title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.1
+                });
+
+                gsap.to(".mouseEffect .mouse_subtitle", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.9
+                });
+
+                gsap.to(".mouseEffect iframe", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -17600) {
+                gsap.to(".scriptSection .topSection", {
+                    duration: 3.0,
+                    width: "200vw"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -18000) {
+                gsap.to(".mouseEffect .mouse_desc", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.4
+                });
+            }
+
+            //slider effect
+            if(mainTagMatrix.m41 <= -18400) {
+                gsap.to(".sliderEffect .slider_title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.1
+                });
+
+                gsap.to(".sliderEffect .slider_subtitle", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.9
+                });
+
+                gsap.to(".sliderEffect iframe", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -19200) {
+                gsap.to(".sliderEffect .slider_desc", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.4
+                });
+            }
+
+            // parralax effect
+            if(mainTagMatrix.m41 <= -19800) {
+                gsap.to(".parallaxEffect .parallax_title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.1
+                });
+
+                gsap.to(".parallaxEffect .parallax_subtitle", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.9
+                });
+
+                gsap.to(".parallaxEffect iframe", {
+                    duration: 0.6,
+                    height: "615px"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -20630) {
+                gsap.to(".parallaxEffect .parallax_desc", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.4
+                });
+            }
+
+            //contact submenu
+            if(mainTagMatrix.m41 <= -22000 && mainTagMatrix.m41 >= -24000) {
+                gsap.to(".contactSection .contactSubMenu .contact", {
+                    duration: 0.6,
+                    height: "400px"
+                });
+            } else if(mainTagMatrix.m41 < -24000) {
+                gsap.to(".contactSection .contactSubMenu .contact", {
+                    duration: 0.6,
+                    height: "50px"
+                });
+            }
+
+            // subText
+            if(mainTagMatrix.m41 <= -22500) {
+                gsap.to(".location .sideText", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+
+                gsap.to(".location h2", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.5
+                });
+
+                gsap.to(".location .contact_intro", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.0
+                });
+
+                gsap.to(".location .contact_location", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.3
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -24000) {
+                gsap.to(".location .mapImage", {
+                    duration: 0.6,
+                    opacity: 1,
+                    height: "700px"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -24800) {
+                gsap.to(".contact_sideImage", {
+                    duration: 0.6,
+                    height: "100vh"
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -25800) {
+                gsap.to(".emailSection .email_title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0
+                });
+            }
+
+            if(mainTagMatrix.m41 <= -26400) {
+                gsap.to(".emailSection p", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.5
+                });
+
+                gsap.to(".emailSection .email_sideTitle", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.5
+                });
+
+                gsap.to(".emailSection .line", {
+                    duration: 0.6,
+                    width: "700px",
+                    delay: 0.8
+                });
+
+                gsap.to(".emailSection .emailLink a", {
+                    duration: 0.6,
+                    opacity: 1,
+                    delay: 1.1
+                });
+            }
+
+            //otherInfo
+            //sideText / title / imgs/ othersites
+            if(mainTagMatrix.m41 <= -27700) {
+                gsap.to(".otherInfo_sideText1", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+
+                gsap.to(".otherInfo_sideText2", {
+                    duration: 0.6,
+                    opacity: 1
+                });
+
+                gsap.to(".otherInfo .title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.5
+                });
+
+                gsap.to(".otherInfo .imgs", {
+                    duration: 0.6,
+                    height: "200px",
+                    delay: 0.8
+                });
+
+                gsap.to(".otherSites .line", {
+                    duration: 0.6,
+                    width: "700px",
+                    dealy: 0.8
+                })
+
+                gsap.to(".otherSites .otherSites_title", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 0.5
+                });
+
+                gsap.to(".otherSites a img", {
+                    duration: 0.6,
+                    height: "25px",
+                    delay: 1.0
+                });
+
+                gsap.to(".otherSites .linkText", {
+                    duration: 0.6,
+                    opacity: 1,
+                    x: 0,
+                    delay: 1.0
+                });
+            }
+            
             requestAnimationFrame(runSectionAnimation);
             scrollXvalue.innerText = mainTagMatrix.m41;
         }
