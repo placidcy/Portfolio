@@ -86,7 +86,7 @@
                             <h2>프로그래밍 언어에 관심을 가지다</h2>
                             <p>컴퓨터 개발 언어에 관심을 가지게 된 이유는
                                 처음으로 그래픽 카드와 CPU 부품을 직접 구입하여 장착했을때부터 시작되었습니다
-                                단순히 부품을 교체하는 일이였고 컴퓨터에 대해 전혀 몰랐었지만 직접 웹사이트에서 
+                                단순히 부품을 교체하는 일이였고 컴퓨터에 대해 전혀 몰랐었지만 직접 웹사이트에서
                                 검색하면서 영상을 찾아보고 따라 하면서 조립을 하였고 제대로 동작했을때 흥미를
                                 느꼈습니다
                                 조립을 하면서 CPU, 메모리 등 부품들의 역할에 대해 궁금증이 생겨 검색으로 찾아보면서 프로그램과의 관계에 대해서 생각했고 프로그램이 어떻게 동작하는지,
@@ -94,12 +94,13 @@
                                 <br><br>
                                 그 뒤에 대학교 전공을 컴퓨터공학으로 결정하였고 c, c++ 등 프로그램 언어에 대해 공부를 시작했습니다
                                 컴퓨터에 대한 구조를 배우고 소프트웨어에서 중요한 메모리 구조에 대해 배웠습니다
-                                메모리에는 특정 데이터가 저장되는 구역이 나뉘어져 있고 어떤 데이터가 저장되는지 배우고 
+                                메모리에는 특정 데이터가 저장되는 구역이 나뉘어져 있고 어떤 데이터가 저장되는지 배우고
                                 프로그래밍을 공부할때 메모리가 중요한 이유에 대해 알게 되었습니다
                                 <br><br>
                                 변수, 매개변수, 함수, 가상 함수 등 C언어의 용어에 대한 내용과 문법을 배웠는데
-                                다른 사람들과 마찬가지로 저도 뜻을 이해하기 어려웠고 정확한 용어의 뜻을 알고 싶어서 사이트 검색을 통해 찾은 내용과 교수님의 설명과 관계지어서 이해하려고 노력했습니다
-                                </p>
+                                다른 사람들과 마찬가지로 저도 뜻을 이해하기 어려웠고 정확한 용어의 뜻을 알고 싶어서 사이트 검색을 통해 찾은 내용과 교수님의 설명과 관계지어서 이해하려고
+                                노력했습니다
+                            </p>
                         </div>
                     </div>
                     <div class="secondPic">
@@ -414,7 +415,7 @@
         </div>
     </main>
 
-    <div class="scrollValue">Matrix3d_X :  <span class="number"></span></div>
+    <div class="scrollValue">Matrix3d_X : <span class="number"></span></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
@@ -475,6 +476,12 @@
         const mainTagElement = document.querySelector("[data-scroll-container]");
         const scrollXvalue = document.querySelector(".scrollValue .number");
 
+        const reactLink = document.querySelector(".otherSites .react .linkText");
+        const vueLink = document.querySelector(".otherSites .vue .linkText");
+        const githubLink = document.querySelector(".otherSites .github .linkText");
+
+
+
         // matrix3d m41(x축) 값 기준 애니메이션
         // [data-scroll-container] 요소 가져오기
         let mainTagStyle = window.getComputedStyle(mainTagElement, null);
@@ -498,12 +505,23 @@
 
         //     requestAnimationFrame(scroll);
         // }
-        
+
         // scroll();
-        
+
         // window.addEventListener("resize", scroll);
 
         //codeview, sitelink
+        reactLink.addEventListener("click", () => {
+
+        });
+
+        vueLink.addEventListener("click", () => {
+
+        });
+
+        githubLink.addEventListener("click", () => {
+            window.open("https://github.com/");
+        });
         standard_codeView.addEventListener("click", () => {
             window.open("https://github.com/placidcy/webs_class/tree/main/webstandard");
         });
@@ -654,7 +672,7 @@
         //     x: 0
         // });
 
-        
+
         //subMenu 마우스 이벤트
 
         //aboutme
@@ -785,7 +803,7 @@
             });
         });
 
-        
+
         contactBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
@@ -825,7 +843,7 @@
                     duration: 0.6,
                     opacity: 1,
                     x: 0,
-                    delay : 0.5
+                    delay: 0.5
                 });
 
             } else if (mainTagMatrix.m41 > -450 || mainTagMatrix.m41 < -2600) {
@@ -958,7 +976,7 @@
                     duration: 0.6,
                     height: "860px"
                 });
-                
+
                 gsap.to(".webStandard h2", {
                     duration: 0.6,
                     opacity: 1,
@@ -1187,12 +1205,12 @@
 
             //script
             //submenu
-            if(mainTagMatrix.m41 <= -14750 && mainTagMatrix.m41 >= -16900) {
+            if (mainTagMatrix.m41 <= -14750 && mainTagMatrix.m41 >= -16900) {
                 gsap.to(".scriptSection .scriptSubMenu .script", {
                     duration: 0.6,
                     height: "400px"
                 });
-            } else if(mainTagMatrix.m41 < -16900) {
+            } else if (mainTagMatrix.m41 < -16900) {
                 gsap.to(".scriptSection .scriptSubMenu .script", {
                     duration: 0.6,
                     height: "50px"
@@ -1200,7 +1218,7 @@
             }
 
             //title
-            if(mainTagMatrix.m41 <= -16000) {
+            if (mainTagMatrix.m41 <= -16000) {
                 gsap.to(".scriptSection .scriptTitle", {
                     duration: 0.6,
                     opacity: 1,
@@ -1216,7 +1234,7 @@
 
             //contents
             //subText
-            if(mainTagMatrix.m41 <= -16800) {
+            if (mainTagMatrix.m41 <= -16800) {
                 gsap.to(".scriptContents .subText", {
                     duration: 0.6,
                     opacity: 1,
@@ -1225,7 +1243,7 @@
             }
 
             //contents section
-            if(mainTagMatrix.m41 <= -16900) {
+            if (mainTagMatrix.m41 <= -16900) {
                 gsap.to(".scriptSection .scriptContents", {
                     duration: 0.6,
                     opacity: 1,
@@ -1235,7 +1253,7 @@
             }
 
             //mouse effect
-            if(mainTagMatrix.m41 <= -17200) {
+            if (mainTagMatrix.m41 <= -17200) {
                 gsap.to(".mouseEffect .mouse_title", {
                     duration: 0.6,
                     opacity: 1,
@@ -1256,14 +1274,14 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -17600) {
+            if (mainTagMatrix.m41 <= -17600) {
                 gsap.to(".scriptSection .topSection", {
                     duration: 3.0,
                     width: "200vw"
                 });
             }
 
-            if(mainTagMatrix.m41 <= -18000) {
+            if (mainTagMatrix.m41 <= -18000) {
                 gsap.to(".mouseEffect .mouse_desc", {
                     duration: 0.6,
                     opacity: 1,
@@ -1273,7 +1291,7 @@
             }
 
             //slider effect
-            if(mainTagMatrix.m41 <= -18400) {
+            if (mainTagMatrix.m41 <= -18400) {
                 gsap.to(".sliderEffect .slider_title", {
                     duration: 0.6,
                     opacity: 1,
@@ -1294,7 +1312,7 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -19200) {
+            if (mainTagMatrix.m41 <= -19200) {
                 gsap.to(".sliderEffect .slider_desc", {
                     duration: 0.6,
                     opacity: 1,
@@ -1304,7 +1322,7 @@
             }
 
             // parralax effect
-            if(mainTagMatrix.m41 <= -19800) {
+            if (mainTagMatrix.m41 <= -19800) {
                 gsap.to(".parallaxEffect .parallax_title", {
                     duration: 0.6,
                     opacity: 1,
@@ -1325,7 +1343,7 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -20630) {
+            if (mainTagMatrix.m41 <= -20630) {
                 gsap.to(".parallaxEffect .parallax_desc", {
                     duration: 0.6,
                     opacity: 1,
@@ -1335,12 +1353,12 @@
             }
 
             //contact submenu
-            if(mainTagMatrix.m41 <= -22000 && mainTagMatrix.m41 >= -24000) {
+            if (mainTagMatrix.m41 <= -22000 && mainTagMatrix.m41 >= -24000) {
                 gsap.to(".contactSection .contactSubMenu .contact", {
                     duration: 0.6,
                     height: "400px"
                 });
-            } else if(mainTagMatrix.m41 < -24000) {
+            } else if (mainTagMatrix.m41 < -24000) {
                 gsap.to(".contactSection .contactSubMenu .contact", {
                     duration: 0.6,
                     height: "50px"
@@ -1348,7 +1366,7 @@
             }
 
             // subText
-            if(mainTagMatrix.m41 <= -22500) {
+            if (mainTagMatrix.m41 <= -22500) {
                 gsap.to(".location .sideText", {
                     duration: 0.6,
                     opacity: 1
@@ -1376,7 +1394,7 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -24000) {
+            if (mainTagMatrix.m41 <= -24000) {
                 gsap.to(".location .mapImage", {
                     duration: 0.6,
                     opacity: 1,
@@ -1384,14 +1402,14 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -24800) {
+            if (mainTagMatrix.m41 <= -24800) {
                 gsap.to(".contact_sideImage", {
                     duration: 0.6,
                     height: "100vh"
                 });
             }
 
-            if(mainTagMatrix.m41 <= -25800) {
+            if (mainTagMatrix.m41 <= -25800) {
                 gsap.to(".emailSection .email_title", {
                     duration: 0.6,
                     opacity: 1,
@@ -1399,7 +1417,7 @@
                 });
             }
 
-            if(mainTagMatrix.m41 <= -26400) {
+            if (mainTagMatrix.m41 <= -26400) {
                 gsap.to(".emailSection p", {
                     duration: 0.6,
                     opacity: 1,
@@ -1429,7 +1447,7 @@
 
             //otherInfo
             //sideText / title / imgs/ othersites
-            if(mainTagMatrix.m41 <= -27700) {
+            if (mainTagMatrix.m41 <= -27700) {
                 gsap.to(".otherInfo_sideText1", {
                     duration: 0.6,
                     opacity: 1
@@ -1479,7 +1497,7 @@
                     delay: 1.0
                 });
             }
-            
+
             requestAnimationFrame(runSectionAnimation);
             scrollXvalue.innerText = mainTagMatrix.m41;
         }
