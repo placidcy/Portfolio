@@ -464,8 +464,8 @@
         const mainSiteView = document.querySelector(".mainSiteView");
         const mainSite_codeView = document.querySelector(".mainSite_codeView");
 
-        const phpView = document.querySelector(".php_codeView");
-        const php_codeView = document.querySelector(".phpView");
+        const phpView = document.querySelector(".phpView");
+        const php_codeView = document.querySelector(".php_codeView");
 
         const reactView = document.querySelector(".reactView");
         const react_codeView = document.querySelector(".react_codeView");
@@ -1366,10 +1366,11 @@
             }
 
             // subText
-            if (mainTagMatrix.m41 <= -22500) {
+            if (mainTagMatrix.m41 <= -22650) {
                 gsap.to(".location .sideText", {
                     duration: 0.6,
-                    opacity: 1
+                    opacity: 1,
+                    x: 0
                 });
 
                 gsap.to(".location h2", {
@@ -1450,12 +1451,14 @@
             if (mainTagMatrix.m41 <= -27700) {
                 gsap.to(".otherInfo_sideText1", {
                     duration: 0.6,
-                    opacity: 1
+                    opacity: 1,
+                    y: 0
                 });
 
                 gsap.to(".otherInfo_sideText2", {
                     duration: 0.6,
-                    opacity: 1
+                    opacity: 1,
+                    x: 0
                 });
 
                 gsap.to(".otherInfo .title", {
