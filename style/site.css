@@ -391,7 +391,7 @@ html.has-scroll-dragging {
 }
 
 .firstPic {
-    width: 535px;
+    width: 555px;
     height: 0;
     background-color: #F0A398;
     position: relative;
@@ -413,7 +413,7 @@ html.has-scroll-dragging {
 }
 
 .firstIntro .textBox {
-    margin: 0 60px;
+    padding: 0 60px;
 }
 
 .firstIntro h2 {
@@ -466,11 +466,10 @@ html.has-scroll-dragging {
 }
 
 .secondPic img {
-
 }
 
 .secondPic .textBox {
-    margin: 0 60px;
+    padding: 0 60px;
 }
 
 .secondIntro {
@@ -492,7 +491,7 @@ html.has-scroll-dragging {
 }
 
 .secondIntro p {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Chosunilbo_myungjo";
     color: white;
     line-height: 1.5;
