@@ -1261,9 +1261,9 @@ html.has-scroll-dragging {
     font-size: 20px;
     font-family: "Bebas Neue";
     position: absolute;
-    left: 70px;
+    left: 50px;
     top: 370px;
-    transform: rotate(90deg) translateX(-30px);
+    transform: rotate(90deg) translateY(-50px);
     opacity: 0;
 }
 
