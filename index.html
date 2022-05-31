@@ -440,7 +440,7 @@
         const contactBox = document.querySelector(".subMenu .contact");
 
         const nav = document.querySelector(".header .menu");
-        const nav_Home = document.querySelector(".header .menu .home");
+        const nav_Home = document.querySelector(".header .menu .home a");
         const nav_aboutMe = document.querySelector(".header .menu .aboutMe a");
         const nav_script = document.querySelector(".header .menu .script a");
         const nav_site = document.querySelector(".header .menu .site a");
@@ -480,11 +480,16 @@
         const vueLink = document.querySelector(".otherSites .vue .linkText");
         const githubLink = document.querySelector(".otherSites .github .linkText");
 
-
-
         // matrix3d m41(x축) 값 기준 애니메이션
         // [data-scroll-container] 요소 가져오기
         let mainTagStyle = window.getComputedStyle(mainTagElement, null);
+
+          // 메뉴 스크롤
+          nav_aboutMe.addEventListener("click", () => {
+              alert("클릭");
+              let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
+              window.scrollTo(mainTagMatrix.m41 = -2100, 0);
+          });
 
         // 가로 스크롤
         // function scroll() {
