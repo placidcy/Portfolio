@@ -226,7 +226,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <h2>REACT</h2>
                         </div>
                     </div>
@@ -279,7 +278,7 @@
                     </div>
 
                     <div class="scriptContents">
-                        <div class="subText">SCRIPT</div>
+                        <span class="scriptSubText">SCRIPT</span>
 
                         <div class="effectBox">
                             <div class="mouseEffect">
@@ -1235,7 +1234,7 @@
             //contents
             //subText
             if (mainTagMatrix.m41 <= -16800) {
-                gsap.to(".scriptContents .subText", {
+                gsap.to(".scriptContents .scriptSubText", {
                     duration: 0.6,
                     opacity: 1,
                     y: 0
@@ -1245,10 +1244,8 @@
             //contents section
             if (mainTagMatrix.m41 <= -16900) {
                 gsap.to(".scriptSection .scriptContents", {
-                    duration: 0.6,
-                    opacity: 1,
-                    y: 0,
-                    height: "85vh"
+                    duration: 3.0,
+                    width: "230vw"
                 })
             }
 

@@ -466,7 +466,7 @@ html.has-scroll-dragging {
 }
 
 .secondPic img {
-    
+
 }
 
 .secondPic .textBox {
@@ -1045,9 +1045,10 @@ html.has-scroll-dragging {
 
 .scriptSection .scriptContents {
     background-color: #ffddd4;
-    width: 230vw;
-    /* height: 85vh; */
-    height: 0;
+    /* width: 230vw; */
+    width: 0;
+    height: 85vh;
+    position: relative;
 }
 
 .scriptSection .topSection {
@@ -1069,14 +1070,14 @@ html.has-scroll-dragging {
     margin-top: 40px;
 }
 
-.scriptContents .subText {
+.scriptContents .scriptSubText {
+    position: absolute;
+    left: 10px;
+    top: 55px;
     font-family: 'Bebas Neue';
     font-size: 19px;
     font-weight: 200;
-    display: inline-block;
-    margin-top: 100px;
-    margin-left: 40px;
-    transform: rotate(90deg) translateY(-70px);
+    transform: rotate(90deg) translateY(-50px);
     opacity: 0;
     font-weight: 400;
 }
@@ -1087,11 +1088,11 @@ html.has-scroll-dragging {
 
 /* mouseEffect */
 .mouseEffect {
-    margin: -7vh 7vw 20vh 15vw;
     overflow: hidden;
     position: relative;
     width: 1230px;
     height: 839px;
+    margin: 50px 25px 0 250px;
 }
 
 .mouseEffect iframe {
@@ -1125,9 +1126,9 @@ html.has-scroll-dragging {
 
 /* sliderEffect */
 .sliderEffect {
-    margin: -7vh 7vw 20vh 0;
     position: relative;
     width: 1230px;
+    margin: 50px 25px 0 200px;
 }
 
 .sliderEffect iframe {
@@ -1161,8 +1162,8 @@ html.has-scroll-dragging {
 
 /* parrallax */
 .parallaxEffect {
-    margin: -7vh 7vw 20vh 0;
     width: 1230px;
+    margin: 50px 25px 0 200px;
 }
 
 .parallaxEffect iframe {
