@@ -629,6 +629,10 @@ html.has-scroll-dragging {
 }
 
 .webStandard .standardView .imgBoxText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     line-height: 5.5;
     color: #ffffff;
@@ -726,6 +730,10 @@ html.has-scroll-dragging {
     color: #ffffff;
     font-size: 30px;
     opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* php */
@@ -810,6 +818,10 @@ html.has-scroll-dragging {
     color: #ffffff;
     font-size: 30px;
     opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* react */
@@ -885,6 +897,10 @@ html.has-scroll-dragging {
     color: #ffffff;
     font-size: 30px;
     opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* game */
