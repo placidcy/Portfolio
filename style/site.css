@@ -522,7 +522,7 @@ html.has-scroll-dragging {
     font-size: 80px;
     padding: 0 10px;
     opacity: 1;
-    transform: translateY(150px);
+    /* transform: translateY(150px); */
 }
 
 .siteWork .siteWorkSubMenu .siteDesc {
