@@ -112,7 +112,8 @@
                                 문제를 풀어나갈때 배웠던 문법과 기능들을 생각하고 어떤 문법을 사용해야 될지 고민하면서
                                 자연스럽게 배웠던 내용에 대해서 찾아보고 고민하고 문제가 풀렸을때 흥미를 느꼈습니다
                             </p>
-                            <img src="./img/Frame 3.jpg" width="445px" height="375px" style="opacity: 0" alt="secondPic">
+                            <img src="./img/Frame 3.jpg" width="445px" height="375px" style="opacity: 0"
+                                alt="secondPic">
                         </div>
                     </div>
                     <div class="secondIntro">
@@ -427,6 +428,41 @@
             smooth: true,
             direction: "horizontal"
         });
+
+        // nav 태그 스크롤 이동
+        nav_aboutMe.addEventListener("click", () => {
+            lscroll.scrollTo(aboutMe_section);
+        });
+
+        nav_script.addEventListener("click", () => {
+            lscroll.scrollTo(script_section);
+        });
+
+        nav_site.addEventListener("click", () => {
+            lscroll.scrollTo(site_section);
+        });
+        
+        nav_contact.addEventListener("click", () => {
+            lscroll.scrollTo(contact_section);
+        });
+
+        // subMenu 스크롤 이동
+        aboutMeBox.addEventListener("click", () => {
+            lscroll.scrollTo(aboutMe_section);
+        });
+
+        siteBox.addEventListener("click", () => {
+            lscroll.scrollTo(site_section);
+        });
+
+        scriptBox.addEventListener("click", () => {
+            lscroll.scrollTo(script_section);
+        });
+        
+        contactBox.addEventListener("click", () => {
+            lscroll.scrollTo(contact_section);
+        });
+
     </script>
 
     <script>
@@ -439,12 +475,17 @@
         const scriptBox = document.querySelector(".subMenu .script");
         const contactBox = document.querySelector(".subMenu .contact");
 
+        const aboutMe_section = document.querySelector(".aboutMeBox");
+        const site_section = document.querySelector(".siteWork");
+        const script_section = document.querySelector(".scriptSection");
+        const contact_section = document.querySelector(".contactSection");
+
         const nav = document.querySelector(".header .menu");
-        const nav_Home = document.querySelector(".header .menu .home a");
-        const nav_aboutMe = document.querySelector(".header .menu .aboutMe a");
-        const nav_script = document.querySelector(".header .menu .script a");
-        const nav_site = document.querySelector(".header .menu .site a");
-        const nav_contact = document.querySelector(".header .menu .contact a");
+        const nav_Home = document.querySelector(".header .menu .home");
+        const nav_aboutMe = document.querySelector(".header .menu .aboutMe");
+        const nav_script = document.querySelector(".header .menu .script");
+        const nav_site = document.querySelector(".header .menu .site");
+        const nav_contact = document.querySelector(".header .menu .contact");
 
         const aboutMeTitle = document.querySelector(".aboutMe .subTitle");
         const siteTitle = document.querySelector(".site .subTitle");
@@ -484,40 +525,9 @@
         // [data-scroll-container] 요소 가져오기
         let mainTagStyle = window.getComputedStyle(mainTagElement, null);
 
-          // 메뉴 스크롤
-          nav_aboutMe.addEventListener("click", () => {
-              alert("클릭");
-              let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
-              window.scrollTo(mainTagMatrix.m41 = -2100, 0);
-          });
-
-        // 가로 스크롤
-        // function scroll() {
-        //     const sectionBoxWidth = sectionBox.offsetWidth;
-
-        //     document.body.style.height = sectionBoxWidth + "px";
-        //     let topScroll = window.pageYOffset || window.pageYOffset || document.documentElement.scrollTop;
-        //     let totalSectionWidth = sectionBoxWidth - window.innerWidth;
-        //     let totalSectionHeight = sectionBoxWidth - window.innerHeight;
-
-        //     let toLeftValue = topScroll * (totalSectionWidth / totalSectionHeight);
-
-        //     document.querySelector(".scrollValue span").innerText = Math.round(topScroll);
-
-        //     gsap.to(sectionBox, {
-        //         left: -toLeftValue
-        //     });
-
-        //     requestAnimationFrame(scroll);
-        // }
-
-        // scroll();
-
-        // window.addEventListener("resize", scroll);
-
         //codeview, sitelink
         reactLink.addEventListener("click", () => {
-            
+            window.open("https://reactsites.netlify.app");
         });
 
         vueLink.addEventListener("click", () => {
@@ -525,8 +535,9 @@
         });
 
         githubLink.addEventListener("click", () => {
-            window.open("https://github.com/");
+            window.open("https://github.com/placidcy?tab=repositories");
         });
+
         standard_codeView.addEventListener("click", () => {
             window.open("https://github.com/placidcy/webs_class/tree/main/webstandard");
         });
@@ -565,11 +576,6 @@
 
         game_codeView.addEventListener("click", () => {
             window.open("https://github.com/placidcy/webs_class/tree/main/game");
-        });
-
-        nav_aboutMe.addEventListener("click", () => {
-            let mainTagMatrix = new WebKitCSSMatrix(mainTagStyle.transform);
-            mainTagMatrix.m41 = -2400;
         });
 
         // mainTitle / nav / submenu 애니메이션
