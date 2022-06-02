@@ -42,22 +42,18 @@
                 <div class="subMenu">
                     <div class="aboutMe">
                         <span class="subTitle">A</span>
-                        <!-- <span class="desc"></span> -->
                     </div>
 
                     <div class="site">
                         <span class="subTitle">S</span>
-                        <!-- <span class="desc">SITE</span> -->
                     </div>
 
                     <div class="script">
                         <span class="subTitle">S</span>
-                        <!-- <span class="desc">SCRIPT</span> -->
                     </div>
 
                     <div class="contact">
                         <span class="subTitle">C</span>
-                        <!-- <span class="desc">CONTACT</span> -->
                     </div>
                 </div>
             </section>
@@ -623,164 +619,214 @@
         });
 
         // subMenu
+        // set()
+        gsap.set(aboutMeBox, {opacity: 0, height: "0vh", y: 30});
+        gsap.set(siteBox, {opacity: 0, height: "0vh", y: 30});
+        gsap.set(scriptBox, {opacity: 0, height: "0vh", y: 30});
+        gsap.set(contactBox, {opacity: 0, height: "0vh", y: 30});
+
+        // 기본 애니메이션
         gsap.to(aboutMeBox, {
-            duration: 0.8,
+            duration: 0.4,
             height: "45vh",
-            delay: 1.7
+            delay: 1.7,
+            opacity: 1,
+            y: 0
         });
 
         gsap.to(siteBox, {
-            duration: 0.8,
+            duration: 0.4,
             height: "60vh",
-            delay: 1.9
+            delay: 1.7,
+            opacity: 1,
+            y: 0
         });
 
         gsap.to(scriptBox, {
-            duration: 0.8,
+            duration: 0.4,
             height: "75vh",
-            delay: 2.1
+            delay: 1.7,
+            opacity: 1,
+            y: 0
         });
 
         gsap.to(contactBox, {
-            duration: 0.8,
+            duration: 0.4,
             height: "45vh",
-            delay: 2.3
+            delay: 1.7,
+            opacity: 1,
+            y: 0
         });
 
         gsap.to(".mainPage_desc", {
-            duration: 0.8,
+            duration: 0.4,
             opacity: 1,
             delay: 1.0,
             x: 0
         });
 
         //subMenu 마우스 이벤트
-
         //aboutme
         aboutMeBox.addEventListener("mouseover", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "650px",
+                width: "40%"
+           
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "300px",
+                width: "20%"
+              
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "20%"
+            
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "20%"
             });
         });
 
         aboutMeBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "411px",
+                width: "25%"
+     
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "560px"
+                width: "25%"
+         
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "345px"
+                width: "25%"
+           
             });
 
             gsap.to(contactBox, {
                 duration: 0.1,
-                width: "360px"
+                width: "25%"
             });
         });
 
         //sitebox
         siteBox.addEventListener("mouseover", () => {
+            gsap.to(aboutMeBox, {
+                duration: 0.1,
+                width: "20%"
+            });
+
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "650px",
+                width: "40%"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "300px"
+                width: "20%"
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "20%"
             });
         });
 
         siteBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "411px",
+                width: "25%"
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "560px"
+                width: "25%"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "345px"
+                width: "25%"
             });
 
             gsap.to(contactBox, {
                 duration: 0.1,
-                width: "360px"
+                width: "25%"
             });
         });
 
         //script
         scriptBox.addEventListener("mouseover", () => {
-            gsap.to(scriptBox, {
+            gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "650px",
+                width: "20%"
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "300px",
+                width: "20%"
+            });
+
+            gsap.to(scriptBox, {
+                duration: 0.1,
+                width: "40%"
             });
 
             gsap.to(contactBox, {
                 duration: 0.1,
-                width: "300px",
+                width: "20%"
             });
         });
 
         scriptBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "411px",
+                width: "25%"
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "560px"
+                width: "25%"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "345px"
+                width: "25%"
             });
 
             gsap.to(contactBox, {
                 duration: 0.1,
-                width: "360px"
+                width: "25%"
             });
         });
 
         //contact
         contactBox.addEventListener("mouseover", () => {
-            gsap.to(contactBox, {
+            gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "650px",
+                width: "25%"
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "300px",
+                width: "25%"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "300px",
+                width: "20%"
+            });
+
+            gsap.to(contactBox, {
+                duration: 0.1,
+                width: "30%"
             });
         });
 
@@ -788,22 +834,26 @@
         contactBox.addEventListener("mouseout", () => {
             gsap.to(aboutMeBox, {
                 duration: 0.1,
-                width: "411px",
+                width: "25%",
+                height: "45vh"
             });
 
             gsap.to(siteBox, {
                 duration: 0.1,
-                width: "560px"
+                width: "25%",
+                height: "60vh"
             });
 
             gsap.to(scriptBox, {
                 duration: 0.1,
-                width: "345px"
+                width: "25%",
+                height: "75vh"
             });
 
             gsap.to(contactBox, {
                 duration: 0.1,
-                width: "360px"
+                width: "25%",
+                height: "45vh"
             });
         });
 

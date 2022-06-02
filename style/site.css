@@ -148,24 +148,22 @@ html.has-scroll-dragging {
 
 /* subMenu */
 .subMenu {
-    position: absolute;
-    bottom: 0;
+    width: 100%;
     display: flex;
     align-items: flex-end;
-    margin-left: 130px;
 }
 
 .subMenu div {
-    margin-left: 0;
-    margin-right: 0;
-    color: black;
+    width: 25%;
+    transition:  width 0.5s cubic-bezier(0, 1.45, 0.62, 1.3), 
+    height 0.8s cubic-bezier(0, 0.73, 0.14, 1.2), 
+    border-radius 0.3s cubic-bezier(0, 1.45, 0.62, 1.3);;
     cursor: pointer;
 }
 
+/* aboutMe */
 .subMenu .aboutMe {
-    width: 411px;
-    /* height: 500px; */
-    height: 0;
+    height: 45vh;
     background-color: #F0A398;
 }
 
@@ -190,17 +188,13 @@ html.has-scroll-dragging {
     font-size: 400px;
     font-family: 'Raleway Dots';
     display: block;
-    /* position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
     opacity: 0;
     text-align: center;
 }
 
+/* site */
 .subMenu .site {
-    width: 560px;
-    height: 0;
+    height: 60vh;
     background-color: #BA85CC;
     position: relative;
 }
@@ -208,14 +202,6 @@ html.has-scroll-dragging {
 .subMenu .site:hover {
     border-radius: 500px 500px 0 0;
 }
-
-/* .subMenu .site .desc {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    opacity: 0;
-    transform: translateX(-30px);
-} */
 
 .subMenu .site .subTitle {
     font-size: 400px;
@@ -238,10 +224,9 @@ html.has-scroll-dragging {
     opacity: 1;
 }
 
+/* script */
 .subMenu .script {
-    width: 345px;
-    height: 790px;
-    height: 0;
+    height: 75vh;
     background-color: #85B2CC;
     position: relative;
 }
@@ -271,17 +256,10 @@ html.has-scroll-dragging {
     opacity: 1;
 }
 
-/* .subMenu .script .desc {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    opacity: 0;
-    transform: translateX(-30px);
-} */
+/* contact */
 
 .subMenu .contact {
-    width: 360px;
-    height: 0;
+    height: 45vh;
     background-color: #FFD395;
     position: relative;
 }
@@ -466,7 +444,7 @@ html.has-scroll-dragging {
 }
 
 .secondPic img {
-    transform: translateY(-30px);
+
 }
 
 .secondPic .textBox {
