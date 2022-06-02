@@ -100,7 +100,7 @@ html.has-scroll-dragging {
 .mainPage .mainTitle {
     transform: translateX(-100px);
     opacity: 0;
-    font-size: 139px;
+    font-size: 6vw;
     font-family: "Sulphur Point";
     margin-left: 100px;
     margin-top: 50px;
