@@ -183,7 +183,7 @@ html.has-scroll-dragging {
     display: block;
     margin-top: -40px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: "Sulphur Point";
     opacity: 0;
 }
    
@@ -220,7 +220,7 @@ html.has-scroll-dragging {
     display: block;
     margin-top: -20px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: "Sulphur Point";
     opacity: 0;
 }
 
@@ -250,7 +250,7 @@ html.has-scroll-dragging {
     display: block;
     margin-top: -40px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: "Sulphur Point";
     opacity: 0;
 }
 
@@ -259,7 +259,6 @@ html.has-scroll-dragging {
 }
 
 /* contact */
-
 .subMenu .contact {
     height: 45vh;
     background-color: #FFD395;
@@ -281,7 +280,7 @@ html.has-scroll-dragging {
     display: block;
     margin-top: -40px;
     font-size: 18px;
-    font-family: sans-serif;
+    font-family: "Sulphur Point";
     opacity: 0;
 }
 
@@ -443,10 +442,6 @@ html.has-scroll-dragging {
     opacity: 0;
 }
 
-.secondPic img {
-
-}
-
 .secondPic .textBox {
     padding: 0 60px;
 }
@@ -542,7 +537,6 @@ html.has-scroll-dragging {
 }
 
 
-/* webstandard */
 .siteWorkSection {
     /* height: 875px; */
     height: 0;
@@ -551,6 +545,7 @@ html.has-scroll-dragging {
     margin-left: 770px;
 }
 
+/* webstandard */
 .siteWorkSection .webStandard {
     margin-left: 100px;
     width: 85vw;
@@ -581,10 +576,6 @@ html.has-scroll-dragging {
     position: relative;
     float: right;
     margin-top: 50px;
-    /* position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 652px; */
 }
 
 .webStandard .standardView {
@@ -616,6 +607,11 @@ html.has-scroll-dragging {
     color: #ffffff;
     font-size: 30px;
     opacity: 0;
+}
+
+.webStandard .standardView .imgBoxText a {
+    text-decoration: none;
+    color: white;
 }
 
 .webStandard .standard_codeView {
@@ -657,8 +653,6 @@ html.has-scroll-dragging {
     font-size: 18px;
     width: 310px;
     line-height: 2.0;
-    float: right;
-    transform: translate(130px, -365px);
     opacity: 0;
 }
 
@@ -666,12 +660,10 @@ html.has-scroll-dragging {
     /* width: 205px; */
     width: 0;
     height: 45px;
+    margin-top: 40px;
     background-color: #9253A8;
     text-align: center;
     line-height: 2.5;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    float: left;
 }
 
 .mainSite .mainSite_codeView a {
@@ -691,11 +683,11 @@ html.has-scroll-dragging {
 }
 
 .mainSite .mainSiteView {
-    position: absolute;
-    right: 50px;
-    bottom: 30px;
     width: 185px;
     height: 185px;
+    margin-left: 130px;
+    margin-top: 30px;
+    display: inline-block;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
@@ -711,6 +703,16 @@ html.has-scroll-dragging {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.mainSite .imgBoxText a {
+    color: white;
+    text-decoration: none;
+}
+
+.mainSite .textBox {
+    float: right;
+    transform: translateY(-370px);
 }
 
 /* php */
@@ -800,6 +802,11 @@ html.has-scroll-dragging {
     transform: translate(-50%, -50%);
 }
 
+.php .imgBoxText a {
+    color: white;
+    text-decoration: none;
+}
+
 /* react */
 .siteWorkSection .react {
     margin-left: 300px;
@@ -855,9 +862,6 @@ html.has-scroll-dragging {
     height: 45px;
     background-color: #9253A8;
     text-align: center;
-    line-height: 2.5;
-    margin-top: 80px;
-    margin-bottom: 20px;
 }
 
 .react .react_codeView a {
@@ -875,6 +879,14 @@ html.has-scroll-dragging {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.react .imgBoxText a {
+    color: white;
+    text-decoration: none;
+}
+
+.react .textBox {
 }
 
 /* game */
@@ -952,6 +964,11 @@ html.has-scroll-dragging {
     color: #ffffff;
     font-size: 30px;
     opacity: 0;
+}
+
+.game .imgBoxText a {
+    color: black;
+    text-decoration: none;
 }
 
 /* script section */
@@ -1241,7 +1258,7 @@ html.has-scroll-dragging {
     position: absolute;
     left: 50px;
     top: 370px;
-    transform: rotate(90deg) translateY(-50px);
+    transform: rotate(90deg) translate(-50px);
     opacity: 0;
 }
 
