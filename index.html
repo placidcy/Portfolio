@@ -340,9 +340,9 @@
                             I hope that grow up my develop skills myself and<br>
                             become helpful to develop your websites</p>
 
-                        <p class="contact_location">Sangnok-gu,<br>
-                            Ansan-si,<br>
-                            Gyeonggi-do,<br>
+                        <p class="contact_location">Sangnok-gu<br>
+                            Ansan-si<br>
+                            Gyeonggi-do<br>
                             Republic of Korea
                         </p>
 
@@ -625,7 +625,7 @@
         gsap.set(scriptBox, {opacity: 0, height: "0vh", y: 30});
         gsap.set(contactBox, {opacity: 0, height: "0vh", y: 30});
 
-        // 기본 애니메이션
+        // 애니메이션
         gsap.to(aboutMeBox, {
             duration: 0.4,
             height: "45vh",
@@ -971,13 +971,6 @@
                     height: "425px"
                 });
 
-                // gsap.to(".siteWork .siteWorkSubMenu .text", {
-                //     duration: 0.6,
-                //     y: 0,
-                //     opacity: 1,
-                //     delay: 0.5
-                // });
-
                 gsap.to(".siteWork .siteWorkSubMenu .siteDesc", {
                     duration: 0.6,
                     x: 0,
@@ -989,12 +982,6 @@
                     duration: 0.6,
                     height: "50px"
                 });
-
-                // gsap.to(".siteWork .siteWorkSubMenu .text", {
-                //     duration: 0.6,
-                //     y: 0,
-                //     opacity: 0
-                // });
             }
 
             //sitework
@@ -1092,7 +1079,6 @@
             }
 
             // php
-
             if (mainTagMatrix.m41 <= -8700) {
                 gsap.to(".php h2", {
                     duration: 0.6,
