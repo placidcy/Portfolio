@@ -163,6 +163,10 @@ html.has-scroll-dragging {
     cursor: pointer;
 }
 
+.subMenu div h2 {
+    font-weight: lighter;
+}
+
 /* aboutMe */
 .subMenu .aboutMe {
     margin-left: 5vw;
@@ -190,7 +194,6 @@ html.has-scroll-dragging {
 .subMenu .aboutMe .subTitle {
     font-size: 18vw;
     font-family: 'Raleway Dots';
-    display: block;
     opacity: 0;
     text-align: center;
 }
@@ -208,7 +211,6 @@ html.has-scroll-dragging {
 .subMenu .site .subTitle {
     font-size: 18vw;
     font-family: 'Porter Sans Block';
-    display: block;
     text-align: center;
     opacity: 0;
 }
@@ -239,7 +241,6 @@ html.has-scroll-dragging {
 .subMenu .script .subTitle {
     font-size: 18vw;
     font-family: 'Italiana';
-    display: block;
     text-align: center;
     opacity: 0;
 }
@@ -271,7 +272,6 @@ html.has-scroll-dragging {
 .subMenu .contact .subTitle {
     font-size: 18vw;
     font-family: 'PhosphateInline';
-    display: block;
     text-align: center;
     opacity: 0;
 }
