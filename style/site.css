@@ -835,10 +835,8 @@ html.has-scroll-dragging {
     font-family: "Chosunilbo_myungjo";
     font-size: 18px;
     line-height: 2.0;
-    float: right;
-    width: 310px;
-    transform: translate(100px, 260px);
     opacity: 0;
+    width: 310px;
 }
 
 .react .reactView {
@@ -859,12 +857,16 @@ html.has-scroll-dragging {
     height: 45px;
     background-color: #9253A8;
     text-align: center;
+    margin-top: 50px;
 }
 
 .react .react_codeView a {
     color: rgb(255, 255, 255);
+    font-family: "Chosunilbo_myungjo";
     text-decoration: none;
     opacity: 0;
+    display: inline-block;
+    padding-top: 10px;
 }
 
 .react .imgBoxText {
@@ -884,6 +886,9 @@ html.has-scroll-dragging {
 }
 
 .react .textBox {
+    float: right;
+    width: 310px;
+    transform: translateY(-530px);
 }
 
 /* game */
